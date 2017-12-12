@@ -336,7 +336,7 @@ section p {
 }
 
 @media (max-width: 800px) {
-	.packages .grid li {
+	.skills .grid li {
 		flex-basis: 100%;
 		padding: 20px;
 	}
