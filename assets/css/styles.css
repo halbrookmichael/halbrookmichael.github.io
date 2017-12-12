@@ -463,14 +463,14 @@ footer p {
 }
 
 .layout .project img {
-	height: 350px;
+	height: 370px;
 	background-clip: content-box;
 	background-size: cover;
 	background-position: center;
 }
 
 .layout .project img.large {
-	flex-basis: 40%;
+	flex-basis: 47%;
 }
 
 @media (max-width: 1100px) {
@@ -481,7 +481,7 @@ footer p {
 
 @media (max-width: 800px) {
 	.layout .project img.large {
-		flex-basis: 100%;
+		flex-basis: 40%;
 	}
 }
 
