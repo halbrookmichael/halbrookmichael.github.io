@@ -1,0 +1,27 @@
+{
+  "name": "halbrookmichael.github.io",
+  "version": "1.0.0",
+  "description": "A portfolio website",
+  "main": "package.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halbrookmichael/halbrookmichael.github.io.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Michael Halbrook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/halbrookmichael/halbrookmichael.github.io/issues"
+  },
+  "homepage": "https://github.com/halbrookmichael/halbrookmichael.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.1"
+  }
+}
