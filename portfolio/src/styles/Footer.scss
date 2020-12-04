@@ -1,0 +1,10 @@
+@import '../design-tokens/colors.scss'; /* bring in SASS vars */
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+    padding: 40px;
+    background-color: $color-black;
+}

@@ -1,0 +1,11 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: #000;
+}
+.form .form-group label {
+    font-weight: bold;
+}
