@@ -1,6 +1,6 @@
 @import '../mixins/spacing';
 @import '../mixins/positioning';
-@import '../design-tokens/colors';
+@import '../variables/colors';
 @import '../helpers/convertToRem';
 
 #portfolio {
@@ -11,10 +11,8 @@
 	}
 	
 	.portfolio-item {
-		// margin-right: 10px;
 		margin-bottom: rem(30px);
 		border-radius: rem(3px);
-		// max-width: 24%;
 		max-width: 48%;
 
 		.description {
@@ -26,7 +24,10 @@
 
 	@media only screen and (max-width: rem(568px)) {
 		.portfolio-item {
-			max-width: 100%;
+			max-width: 95%;
+		}
+		.row {
+			justify-content: center;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 @import '../mixins/positioning';
 @import '../helpers/convertToRem';
-@import '../design-tokens/colors';
+@import '../variables/colors';
 
 .service {
 	position: relative;
