@@ -1,29 +1,30 @@
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 // components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 // layouts
-import Home from './layouts/Home';
-import Portfolio from './layouts/Portfolio';
+import Home from './contents/Home';
+import Portfolio from './contents/Portfolio';
+// Font-Awesome
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCode, faSwatchbook, faVectorSquare } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faCode, faSwatchbook, faVectorSquare)
 
 
 function App() {
   return (
-    <Router>
-      <div className='App'>
-        <Navbar />
-        <div className="main">
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/portfolio'>
-            <Portfolio />
-          </Route>
-        </div>
-        <Footer />
+    <div className='App'>
+      <Navbar />
+      <div className="main">
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/portfolio' component={Portfolio} />
+        </Switch>
       </div>
-    </Router>
+      <Footer />
+    </div>
   );
 }
 

@@ -1,0 +1,34 @@
+@import '../mixins/spacing';
+@import '../mixins/positioning';
+@import '../design-tokens/colors';
+@import '../helpers/convertToRem';
+
+#portfolio {
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	
+	.portfolio-item {
+		// margin-right: 10px;
+		margin-bottom: rem(30px);
+		border-radius: rem(3px);
+		// max-width: 24%;
+		max-width: 48%;
+
+		.description {
+			color: $color-white;
+		}
+
+	
+	}
+
+	@media only screen and (max-width: rem(568px)) {
+		.portfolio-item {
+			max-width: 100%;
+		}
+	}
+}
+
+	

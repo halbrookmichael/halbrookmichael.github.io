@@ -1,0 +1,80 @@
+{
+	"home": {
+	"title": "Front-end Developer, Designer And Creator",
+	"tagline": "I develop clean and user friendly websites, solve client problems and create awesome designs.",
+	"about": "My overall goal is to help my clients reach theirs. While working in the agency world I have created responsive and user-friendly websites, dynamic and intuitive mobile applications and worked with multiple libraries and frameworks. Have a problem that needs to be solved?"
+	},
+	
+	"services": [
+		{
+			"service": "Web Development",
+			"icon": "code",
+			"description": "I create responsive, clean and user-friendly sites. I am proficient in HTML, CSS, SASS, Javascipt, and React.",
+			"btnText": "Web Projects"
+		},
+		{
+			"service": "Design",
+			"icon": "swatchbook",
+			"description": "I like to keep things clean and simple. Intuitive for the user and easy on the eyes.",
+			"btnText": "Design Projects"
+		},
+		{
+			"service": "Creation",
+			"icon": "vector-square",
+			"description": "I create responsive, clean and user-friendly sites. I am proficient in HTML, CSS, SASS, Javascipt, and React.",
+			"btnText": "Other Projects"
+		}
+	],
+	"portfolio": [
+		{
+			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"title": "",
+			"description": ""
+		},
+		{
+			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"title": "",
+			"description": ""
+		},
+		{
+			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"title": "",
+			"description": ""
+		},
+		{
+			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"title": "",
+			"description": ""
+		},
+		{
+			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"title": "",
+			"description": ""
+		},
+		{
+			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"title": "",
+			"description": ""
+		},
+		{
+			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"title": "",
+			"description": ""
+		},
+		{
+			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"title": "",
+			"description": ""
+		},
+		{
+			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"title": "",
+			"description": ""
+		},
+		{
+			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"title": "",
+			"description": ""
+		}
+	]
+}	

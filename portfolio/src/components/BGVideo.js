@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../assets/css/BGVideo.css';
+import '../assets/css/bg-video.css';
 
 class BGVideo extends Component {
   

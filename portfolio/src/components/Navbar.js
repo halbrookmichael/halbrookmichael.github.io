@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavItem from './NavItem';
-import '../styles/Nav.scss';
+import '../styles/nav.scss';
 
 class Navbar extends Component {
    constructor(props) {
@@ -21,12 +21,12 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav>
+      <nav className="container">
         <ul>
           <NavItem item='Home' toLink='/' activec={this.activeitem}/>
-          <NavItem item='About' toLink='/about' activec={this.activeitem}/>
-          <NavItem item='Education' toLink='/education' activec={this.activeitem}/>
           <NavItem item='Portfolio' toLink='/portfolio' activec={this.activeitem}/>
+          <NavItem item='About' toLink='/about' activec={this.activeitem}/>
+          {/* <NavItem item='Education' toLink='/education' activec={this.activeitem}/> */}
           <NavItem item='Contact' toLink='/contact' activec={this.activeitem}/>
         </ul>
       </nav>

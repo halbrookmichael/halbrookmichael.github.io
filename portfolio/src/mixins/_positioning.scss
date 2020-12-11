@@ -1,0 +1,17 @@
+@import '../helpers/convertToRem';
+
+@mixin centerRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin centerColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin spaceBetweenRow {
+    display: flex;
+    justify-content: space-between;
+}

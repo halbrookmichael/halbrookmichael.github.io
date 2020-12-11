@@ -1,0 +1,54 @@
+@import '../mixins/positioning';
+@import '../helpers/convertToRem';
+@import '../design-tokens/colors';
+
+.service {
+	position: relative;
+	height: rem(325px);
+	width: rem(300px);
+	padding: rem(20px);
+	background-color: transparent;
+
+	.head {
+
+		.service-title {
+			font-size: rem(28px);
+			font-weight: bold;
+			line-height: rem(32px);
+		}
+
+		svg {
+			color: $color-blue;
+		}
+	}
+
+	.service-body {
+		text-align: center;
+	}
+
+	.btn-primary {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		width: 80%;
+		left: rem(30px);
+		bottom: rem(15px);
+	}
+}
+
+@media only screen and (max-width: rem(968px)) {
+	.service.card {
+		margin: 0 rem(15px) rem(30px);
+	}
+}
+@media only screen and (max-width: rem(767px)) {
+	.service.card {
+		width: 100%;
+		margin: 0 rem(0px) rem(30px);
+	}
+	.btn-primary {
+		width: 85%;
+	}
+}

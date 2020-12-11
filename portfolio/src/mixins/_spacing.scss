@@ -1,0 +1,11 @@
+@import '../helpers/convertToRem';
+
+@mixin spacingSectionBottom {
+    margin: 0 0 rem(60px) 0;
+}
+@mixin paddingSection($vert, $hori) {
+    padding: rem($vert) rem($hori);
+}
+@mixin marginText {
+    margin-bottom: 1.5rem;
+}
