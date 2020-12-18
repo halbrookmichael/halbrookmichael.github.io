@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import {Button} from 'react-bootstrap';
 
 import '../styles/home.scss';
 import data from '../data/data.json'; 
 
 import PageTitle from '../components/PageTitle';
-import Button from '../components/Button';
 import Service from '../components/Service';
 
 const services = data.services;
@@ -21,7 +21,11 @@ class Home extends Component {
 				<div className="content about">
 					<div className="about-text container">
 						<p>{data.home.about}</p>
-						<a href="/contact"><Button classes="btn-success" buttonText="LET'S CHAT!" /></a>
+						<a href="/contact">
+							<Button variant="primary" className="btn-success" type="submit">
+								Let's Chat
+							</Button>
+						</a>
 					</div>
 				</div>
 				<div className="content container">

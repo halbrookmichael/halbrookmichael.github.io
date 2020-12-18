@@ -7,24 +7,35 @@
 	.row {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
 	}
 	
 	.portfolio-item {
+		padding: rem(0px) rem(10px);
 		margin-bottom: rem(30px);
 		border-radius: rem(3px);
-		max-width: 48%;
+		max-width: 33.3%;
+
+		&.card {
+			border: none;
+		}
 
 		.description {
 			color: $color-white;
 		}
-
-	
 	}
 
+	@media only screen and (max-width: rem(768px)) {
+		.portfolio-item {
+			max-width: 50%;
+		}
+		.row {
+			justify-content: center;
+		}
+	}
 	@media only screen and (max-width: rem(568px)) {
 		.portfolio-item {
-			max-width: 95%;
+			max-width: 100%;
+			margin-bottom: rem(30px);
 		}
 		.row {
 			justify-content: center;

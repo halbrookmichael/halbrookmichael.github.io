@@ -19,6 +19,7 @@ nav {
     position: relative;
     margin-right: rem(30px);
     color: #000;
+    font-weight: bold;
     transition: all 0.3s ease;
 
     a {
@@ -34,10 +35,6 @@ nav {
       color: $color-blue;
       cursor: pointer;
       transition: all 0.3s ease;
-    }
-
-    &.active {
-      font-weight: bold;
     }
   }
 }
