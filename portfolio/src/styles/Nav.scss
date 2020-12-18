@@ -38,6 +38,9 @@
   .main-nav {
     .mobile {
       display: block;
+      width: 100%;
+      text-align: right;
+      padding-right: rem(20px);
     }
 
     ul.links {
@@ -49,6 +52,10 @@
       padding: 20px;
       background-color: #fff;
       z-index: 99;
+    
+      &.open {
+        left: 0;
+      }
     }
   }
 }

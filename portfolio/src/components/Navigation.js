@@ -13,7 +13,7 @@ class Navigation extends Component {
   componentDidMount() {
     document.querySelector('.home').classList.add('active');
   }
-  handleClick(e) {
+  handlelink(e) {
     let links = document.querySelectorAll('li a');
     let link = e.target;
 
@@ -21,20 +21,21 @@ class Navigation extends Component {
       console.log(item)
       item.classList.remove('active');
     })
+
     link.classList.add('active');
   }
 
   render() {
     return (
       <div className="main-nav">
-        <div className="mobile">
-          <Icon icon="bars" size="md" />
+        <div className="mobile" onClick={this.handleMenu}>
+          <Icon icon="bars" size="lg" />
         </div>
         <ul className="links">
-          <NavItem addedClasses="home" item='Home' toLink='/' handleClick={this.handleClick} />
-          <NavItem item='Portfolio' toLink='/portfolio' handleClick={this.handleClick} />
-          <NavItem item='About' toLink='/about' handleClick={this.handleClick} />
-          <NavItem item='Contact' toLink='/contact' handleClick={this.handleClick} />
+          <NavItem addedClasses="home" item='Home' toLink='/' handleClick={this.handlelink} />
+          <NavItem item='Portfolio' toLink='/portfolio' handleClick={this.handlelink} />
+          <NavItem item='About' toLink='/about' handleClick={this.handlelink} />
+          <NavItem item='Contact' toLink='/contact' handleClick={this.handlelink} />
         </ul>
       </div>
     );
