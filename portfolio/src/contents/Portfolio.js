@@ -8,10 +8,7 @@ class Portfolio extends Component {
 
 	render() {
 		return (
-			<div id="portfolio" className="container">
-				<div className="head content">
-					<h1>Portfolio</h1>
-				</div>
+			<div id="portfolio">
 				<PortfolioItem />
 			</div>
 		)

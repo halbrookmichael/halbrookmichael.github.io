@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 // components
-import Navbar from './components/Navbar';
+import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 // layouts
 import Home from './contents/Home';
@@ -17,7 +17,7 @@ library.add(faCode, faSwatchbook, faVectorSquare)
 function App() {
   return (
     <div className='App'>
-      <Navbar />
+      <Navigation />
       <div className="main">
         <Switch>
           <Route exact path='/' component={Home} />

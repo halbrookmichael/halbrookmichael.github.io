@@ -5,9 +5,8 @@ class NavItem extends Component {
 
   render() {
     return (
-      <li id={this.props.item}>
-        <Link to={this.props.toLink} onClick={this.props.activec.bind(this,this.props.item)} />
-        {this.props.item}
+      <li>
+        <Link className={`nav-link ${this.props.addedClasses}`} to={this.props.toLink} onClick={this.props.handleClick}>{this.props.item}</Link> 
       </li>
     );
   }

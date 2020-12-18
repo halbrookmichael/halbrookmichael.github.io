@@ -8,10 +8,10 @@ class Contact extends Component {
 	  constructor(props) {
     	super(props);
 			this.state = {
-					name: "",
-					email: "",
-					feedback: "",
-				};
+				name: "",
+				email: "",
+				feedback: "",
+			};
 		}
 		handleInputChange(event) {
 			event.preventDefault();
