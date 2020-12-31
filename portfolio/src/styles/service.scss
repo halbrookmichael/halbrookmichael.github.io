@@ -4,12 +4,16 @@
 
 .service {
 	position: relative;
-	height: rem(325px);
+	height: auto;
 	width: rem(300px);
-	padding: rem(20px);
-	background-color: transparent;
+	padding: rem(20px) rem(20px) rem(50px);
+	text-align: center;
 
-	.head {
+	&.card {
+		border: none;
+	}
+
+	.service-head {
 
 		.service-title {
 			font-size: rem(28px);
@@ -18,12 +22,12 @@
 		}
 
 		svg {
-			color: $color-blue;
+			color: $color-red_deep;
 		}
 	}
 
 	.service-body {
-		text-align: center;
+		font-size: rem(18px);
 	}
 
 	.btn-primary {

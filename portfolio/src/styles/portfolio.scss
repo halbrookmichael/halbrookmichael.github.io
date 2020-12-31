@@ -4,20 +4,21 @@
 @import '../helpers/convertToRem';
 
 #portfolio {
-
-	.row {
-		display: flex;
-		flex-wrap: wrap;
-	}
 	
 	.portfolio-item {
 		padding: rem(0px) rem(10px);
-		margin-bottom: rem(30px);
+		margin-bottom: rem(60px);
 		border-radius: rem(3px);
-		max-width: 33.3%;
+		width: 33.3%;
 
 		&.card {
+			background-color: transparent;
 			border: none;
+		}
+
+		img {
+			border: .5px solid $color-purple;
+			max-height: 225px;
 		}
 
 		.description {
@@ -27,7 +28,7 @@
 
 	@media only screen and (max-width: rem(768px)) {
 		.portfolio-item {
-			max-width: 50%;
+			width: 50%;
 		}
 		.row {
 			justify-content: center;
@@ -35,7 +36,7 @@
 	}
 	@media only screen and (max-width: rem(568px)) {
 		.portfolio-item {
-			max-width: 100%;
+			width: 100%;
 			margin-bottom: rem(30px);
 		}
 		.row {

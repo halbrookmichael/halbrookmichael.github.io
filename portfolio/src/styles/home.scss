@@ -3,60 +3,63 @@
 @import '../variables/colors';
 @import '../helpers/convertToRem';
 
-.content {
-	@include spacingSectionBottom;
-}
-
 #home {
-  width: 100%;
+	width: 100%;
 
-  .head {
-		@include centerColumn;
-		text-align: center;
+	.head {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		padding-bottom: rem(20px);
+		border-bottom: .5px solid $color-red_deep;
 
-    h1 {
-			@include marginText;
-
-			color: $color-black;
+		h1 {
+			width: 50%;
 			font-weight: bold;
 		}
 		h4 {
-			max-width: 60%;
-			font-weight: 300;
+			width: 50%;
+			font-size: rem(20px);
+			color: $color-purple_grey;
+		}
+
+		@media only screen and (max-width: rem(660px)) {
+			h1, h4 {
+				width: 100%;
+			}
 		}
 	}
+
+ 
 	
 	.about {
-		@include centerColumn;
-		@include paddingSection(40px, 0px);
 
 		width: 100%;
-		background-color: $color-blue;
 
 		.about-text {
 			display: block;
-			width: 80%;
-			text-align: center;
+			text-align: left;
 
 			p {
-				color: $color-white;
-				font-size: rem(24px);
-				margin-bottom: rem(50px);
+				font-size: rem(20px);
 			}
 
-			.btn-success {
-				font-weight: bold;
-				color: $color-blue;
-				padding: rem(10px) rem(40px);
-				background-color: $color-white;
-				transition: all 0.3s ease;
+			@media only screen and (max-width: rem(660px)) {
+			p {
+				font-size: rem(18px);
+			}
+		}
+		}
 
-				&:hover {
-					color: $color-white;
-					background-color: $color-blue;
-					border: 1px solid $color-white;
-					transition: all 0.3s ease;
-				}
+		button {
+			width: auto;
+			text-align: center;
+		}
+
+		@media only screen and (max-width: rem(660px)) {
+			.about-text {
+				width: 100%;
 			}
 		}
 	}
@@ -66,8 +69,8 @@
 	}
 
 	@media only screen and (max-width: rem(968px)) {
-			.services {
-				justify-content: center;
-			}
+		.services {
+			justify-content: center;
 		}
+	}
 }

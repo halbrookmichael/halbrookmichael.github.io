@@ -8,6 +8,10 @@
     width: 100%;
     height: 80px;
     padding: 60px 20px;
-    color: $color-white;
-    background-color: $color-black;
+    background-color: $color-purple_grey;
+
+    p {
+        color: $color-white;
+        text-align: center;
+    }
 }

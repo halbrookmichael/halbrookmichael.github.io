@@ -1,10 +1,10 @@
 {
 	"home": {
-	"title": "Front-end Developer, Designer And Creator",
-	"tagline": "I develop clean and user friendly websites, solve client problems and create awesome designs.",
-	"about": "My overall goal is to help my clients reach theirs. While working in the agency world I have created responsive and user-friendly websites, dynamic and intuitive mobile applications and worked with multiple libraries and frameworks. Have a problem that needs to be solved?"
+		"title": "Hi, I'm Michael",
+		"tagline": "I develop clean and user friendly websites, solve client problems and create awesome designs.",
+		"about": "My overall goal is to help my clients reach theirs. While working in the agency world I have created responsive and user-friendly websites, dynamic and intuitive mobile applications and worked with multiple libraries and frameworks. Have a problem that needs to be solved?",
+		"aboutTitle": "The Goal"
 	},
-	
 	"services": [
 		{
 			"service": "Web Development",
@@ -21,7 +21,7 @@
 		{
 			"service": "Creation",
 			"icon": "vector-square",
-			"description": "I create responsive, clean and user-friendly sites. I am proficient in HTML, CSS, SASS, Javascipt, and React.",
+			"description": "I never want to limit myself to a medium. I like to explore and be creative. ",
 			"btnText": "Other Projects"
 		}
 	],
@@ -30,61 +30,38 @@
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/b-side_new.png",
 			"title": "",
 			"description": "Hello",
-			"btnText": "View Project"
+			"btnText": "View Detail"
 		},
 		{
-			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf.png",
 			"title": "",
-			"description": "",
-			"btnText": "View Project"
+			"description": "Hello",
+			"btnText": "View Detail"
 		},
 		{
-			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/aliengear.png",
 			"title": "",
-			"description": "",
-			"btnText": "View Project"
+			"description": "Hello",
+			"btnText": "View Detail"
 		},
 		{
-			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/comics_kingdom.png",
 			"title": "",
-			"description": "",
-			"btnText": "View Project"
+			"description": "Hello",
+			"btnText": "View Detail"
 		},
 		{
-			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/T4MI.png",
 			"title": "",
-			"description": "",
-			"btnText": "View Project"
+			"description": "Hello",
+			"btnText": "View Detail"
 		},
 		{
-			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/a2e.png",
 			"title": "",
-			"description": "",
-			"btnText": "View Project"
-		},
-		{
-			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
-			"title": "",
-			"description": "",
-			"btnText": "View Project"
-		},
-		{
-			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
-			"title": "",
-			"description": "",
-			"btnText": "View Project"
-		},
-		{
-			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
-			"title": "",
-			"description": "",
-			"btnText": "View Project"
-		},
-		{
-			"img": "http://www.freedigitalphotos.net/images/previews/illustration-digital-painting-forest-scene-100394230.jpg",
-			"title": "",
-			"description": "",
-			"btnText": "View Project"
+			"description": "Hello",
+			"btnText": "View Detail"
 		}
+	
 	]
 }	

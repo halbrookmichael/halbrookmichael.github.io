@@ -1,26 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Button } from 'react-bootstrap';
 
 import '../styles/service.scss';
 
 import Icon from '../components/Icon';
-import Button from '../components/Button';
 
-class Service extends Component {
-
-	render() {
-		return (
-			<div className="service card">
-				<div className="head">
-					<Icon icon={this.props.icon} size="4x" />
-					<p className="service-title">{this.props.service}</p>
-				</div>
-				<div className="service-body">
-					<p>{this.props.serviceDesc}</p>
-				</div>
-				<Button buttonText={this.props.btnText} classes="btn-primary" />
+const Service = (props) => {
+	return (
+		<div className="service card">
+			<div className="service-head">
+				<Icon icon={props.icon} size="4x" />
+				<p className="service-title">{props.service}</p>
 			</div>
-		)
-	}
+			<div className="service-body">
+				<p>{props.serviceDesc}</p>
+			</div>
+			<Button classes="btn-primary">{props.btnText}</Button>
+		</div>
+	)
 }
 
 export default Service;

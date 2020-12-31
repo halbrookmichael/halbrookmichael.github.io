@@ -3,8 +3,6 @@ import {Button} from 'react-bootstrap';
 
 import '../styles/home.scss';
 import data from '../data/data.json'; 
-
-import PageTitle from '../components/PageTitle';
 import Service from '../components/Service';
 
 const services = data.services;
@@ -13,29 +11,31 @@ class Home extends Component {
 	
 	render() {
 		return (
-			<section id="home">
-				<div className="content head container">
-					<PageTitle pageName={data.home.title} />
+			<div id="home" className="container">
+				<div className="head content">
+					<h1>{data.home.title}</h1>
 					<h4>{data.home.tagline}</h4>
 				</div>
 				<div className="content about">
-					<div className="about-text container">
+					<div className="about-text">
+						<h2>{data.home.aboutTitle}</h2>
 						<p>{data.home.about}</p>
-						<a href="/contact">
-							<Button variant="primary" className="btn-success" type="submit">
-								Let's Chat
-							</Button>
-						</a>
 					</div>
+					<a href="/contact">
+						<Button>
+							Let's Chat
+						</Button>
+					</a>
 				</div>
-				<div className="content container">
+				<div className="content">
 					<div className="row services">
 						{services.map((service, index) => (
 							<Service key={index} className="col-sm" iconColor="#205493" service={service.service} icon={service.icon} serviceDesc={service.description} btnText={service.btnText} />
 						))}
 					</div>
 				</div>
-			</section>
+
+			</div>
 		)
 	}
 }

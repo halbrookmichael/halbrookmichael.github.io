@@ -1,41 +1,65 @@
 import React, { Component } from 'react';
 import NavItem from './NavItem';
 
-import Icon from '../components/Icon';
+import Hamburger from '../../node_modules/hamburger-react';
 
 import '../styles/nav.scss';
 
 class Navigation extends Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-  componentDidMount() {
-    document.querySelector('.home').classList.add('active');
-  }
-  handlelink(e) {
-    let links = document.querySelectorAll('li a');
-    let link = e.target;
 
-    links.forEach((item) => {
-      console.log(item)
+    this.state = {
+      isOpen: false,
+    }
+
+    this.handleLink = this.handleLink.bind(this);
+    this.handleMenu = this.handleMenu.bind(this);
+    // this.toggleMobile = this.toggleMobile.bind(this);
+  }
+  
+  componentDidMount() {
+    let href = window.location.href.split('/');
+
+    if(href[3] === '')
+      document.querySelector('.home').classList.add('active');
+    else {
+      document.querySelector(`.${href[3]}`).classList.add('active');
+    } 
+  }
+  handleLink(e) {
+    let link = document.querySelectorAll('li a');
+    let currentLink = e.target;
+    this.setState({ isOpen: !this.state.isOpen });
+
+    link.forEach((item) => {
       item.classList.remove('active');
     })
 
-    link.classList.add('active');
+    currentLink.classList.add('active');
+  }
+  handleMenu() {
+    let links = document.querySelector('.links');
+
+    if(!links.classList.contains('open')) 
+      this.setState({ isOpen: true });
+    else if(links.classList.contains('open'))
+      this.setState({ isOpen: false });
   }
 
   render() {
+
     return (
       <div className="main-nav">
         <div className="mobile" onClick={this.handleMenu}>
-          <Icon icon="bars" size="lg" />
+          <Hamburger />
         </div>
-        <ul className="links">
-          <NavItem addedClasses="home" item='Home' toLink='/' handleClick={this.handlelink} />
-          <NavItem item='Portfolio' toLink='/portfolio' handleClick={this.handlelink} />
-          <NavItem item='About' toLink='/about' handleClick={this.handlelink} />
-          <NavItem item='Contact' toLink='/contact' handleClick={this.handlelink} />
+        <ul className={`links ${this.state.isOpen ? 'open' : null}`}>
+          <NavItem addedClasses="home" item='Home' toLink='/' handleClick={this.handleLink} />
+          <NavItem addedClasses="portfolio" item='Portfolio' toLink='/portfolio' handleClick={this.handleLink} />
+          <NavItem addedClasses="about" item='About' toLink='/about' handleClick={this.handleLink} />
+          <NavItem addedClasses="testimonials" item='Testimonials' toLink='/testimonials' handleClick={this.handleLink} />
+          <NavItem addedClasses="contact" item='Contact' toLink='/contact' handleClick={this.handleLink} />
         </ul>
       </div>
     );

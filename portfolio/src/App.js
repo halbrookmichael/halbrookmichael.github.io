@@ -9,10 +9,9 @@ import Portfolio from './contents/Portfolio';
 import Contact from './contents/Contact';
 // Font-Awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCode, faSwatchbook, faVectorSquare, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faSwatchbook, faVectorSquare, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faCode, faSwatchbook, faVectorSquare, faBars)
-
+library.add(faCode, faSwatchbook, faVectorSquare, faBars, faTimes)
 
 function App() {
   return (
