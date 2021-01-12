@@ -1,7 +1,5 @@
 import React from 'react';
 
-import NavItem from '../components/NavItem';
-
 import '../styles/footer.scss'
 
  const Footer = (props) => {

@@ -30,42 +30,102 @@
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/b-side-min.png",
 			"title": "B-Side Games",
 			"description": "",
-			"technologies": "",
+			"technologies": [
+				{
+					"technology": "Wix"
+				},
+				{
+					"technology": "jQuery"
+				},
+				{
+					"technology": "HTML"
+				}
+			],
 			"btnText": "View Detail"
 		},
 		{
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf-min.png",
 			"title": "WHWF Spokane",
 			"description": "",
-			"technologies": "",
+			"technologies": [
+				{
+					"technology": "Wix"
+				},
+				{
+					"technology": "jQuery"
+				},
+				{
+					"technology": "HTML"
+				}
+			],
 			"btnText": "View Detail"
 		},
 		{
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/aliengear-min.png",
 			"title": "Aliengear Holsters",
 			"description": "",
-			"technologies": "",
+			"technologies": [
+				{
+					"technology": "Wix"
+				},
+				{
+					"technology": "jQuery"
+				},
+				{
+					"technology": "HTML"
+				}
+			],
 			"btnText": "View Detail"
 		},
 		{
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/ck-min.png",
 			"title": "Comics Kingdom",
 			"description": "",
-			"technologies": "",
+			"technologies": [
+				{
+					"technology": "Wix"
+				},
+				{
+					"technology": "jQuery"
+				},
+				{
+					"technology": "HTML"
+				}
+			],
 			"btnText": "View Detail"
 		},
 		{
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/t4mi-min.png",
 			"title": "T4MI",
 			"description": "",
-			"technologies": "",
+			"technologies": [
+				{
+					"technology": "Wix"
+				},
+				{
+					"technology": "jQuery"
+				},
+				{
+					"technology": "HTML"
+				}
+			],
 			"btnText": "View Detail"
 		},
 		{
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/a2e-min.png",
 			"title": "Access2Experience",
 			"description": "",
-			"technologies": "",
+			"technologies": [
+				{
+					"technology": "Wix"
+				},
+				{
+					"technology": "jQuery"
+				},
+				{
+					"technology": "HTML"
+				}
+			],
 			"btnText": "View Detail"
 		}
 	
