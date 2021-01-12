@@ -54,7 +54,7 @@ class Navigation extends Component {
         <div className="mobile" onClick={this.handleMenu}>
           <Hamburger />
         </div>
-        <ul className={`links ${this.state.isOpen ? 'open' : null}`}>
+        <ul className={`links container ${this.state.isOpen ? 'open' : null}`}>
           <NavItem addedClasses="home" item='Home' toLink='/' handleClick={this.handleLink} />
           <NavItem addedClasses="portfolio" item='Portfolio' toLink='/portfolio' handleClick={this.handleLink} />
           <NavItem addedClasses="about" item='About' toLink='/about' handleClick={this.handleLink} />

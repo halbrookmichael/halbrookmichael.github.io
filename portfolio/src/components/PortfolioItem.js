@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
-import {Button, Card} from 'react-bootstrap';
-import BaseModal from "./BaseModal";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../styles/home.scss';
 import data from '../data/data.json'; 
@@ -8,25 +7,24 @@ import data from '../data/data.json';
 const portfolioItems = data.portfolio;
 
 const PortfolioItem = (props) => {
-	let isOpen = false;
 
 	return (
-		<div className="row">
+		<div>
 			{portfolioItems.map((item, index) => (
-				<Card key={index} className="portfolio-item">
-					<Card.Img variant="top" src={item.img} />
-					<Card.Body>
-						<Card.Title>{item.title}</Card.Title>
-						<Card.Text>
-							{item.description}
-						</Card.Text>
-						<Button variant="primary" onClick={() => {
-							isOpen = !isOpen;
-						} }>{item.btnText}</Button>
-					</Card.Body>
-				</Card>
+				<Link className="portfolio-item" key={index} 
+					to={{
+						pathname: '/portfolioDetail',
+						data: item
+					}}>
+					<div>
+						<div className="highlight">
+							<h2>{item.title}</h2>
+						</div>
+						<img src={item.img} alt='' />
+					</div>
+					<p>{item.description}</p>
+				</Link>
 			))}
-			<BaseModal show={isOpen}/>
 		</div>
 	)
 }
