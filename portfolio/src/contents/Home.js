@@ -11,12 +11,12 @@ class Home extends Component {
 	
 	render() {
 		return (
-			<div id="home" className="container">
-				<div className="head content">
+			<div id="home">
+				<div className="head content container">
 					<h1>{data.home.title}</h1>
 					<h4>{data.home.tagline}</h4>
 				</div>
-				<div className="content about">
+				<div className="content about container">
 					<div className="about-text">
 						<h2>{data.home.aboutTitle}</h2>
 						<p>{data.home.about}</p>
@@ -28,13 +28,12 @@ class Home extends Component {
 					</a>
 				</div>
 				<div className="content">
-					<div className="row services">
+					<div className="services">
 						{services.map((service, index) => (
 							<Service key={index} className="col-sm" iconColor="#205493" service={service.service} icon={service.icon} serviceDesc={service.description} btnText={service.btnText} />
 						))}
 					</div>
 				</div>
-
 			</div>
 		)
 	}

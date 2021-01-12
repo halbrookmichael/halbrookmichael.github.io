@@ -28,3 +28,20 @@
 .content {
 	@include spacingSectionBottom;
 }
+ul {
+  list-style: none;
+}
+.nav-link {
+    position: relative;
+    margin-right: rem(30px);
+    color: #000;
+    font-weight: bold;
+    list-style: none;
+    transition: all 0.3s ease;
+    
+    &.active, &:hover {
+      color: $color-red_deep;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  }

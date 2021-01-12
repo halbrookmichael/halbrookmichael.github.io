@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 // layouts
 import Home from './contents/Home';
 import Portfolio from './contents/Portfolio';
+import PortfolioDetail from './contents/PortfolioDetail';
 import Contact from './contents/Contact';
 // Font-Awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -22,6 +23,7 @@ function App() {
           <Route exact path='/' component={Home} />
           <Route path='/portfolio' component={Portfolio} />
           <Route path='/contact' component={Contact} />
+          <Route path='/portfolioDetail' component={PortfolioDetail} />
         </Switch>
       </div>
       <Footer />

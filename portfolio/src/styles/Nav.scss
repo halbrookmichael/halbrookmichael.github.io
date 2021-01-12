@@ -2,10 +2,8 @@
 @import '../helpers/convertToRem';
 
 .main-nav {
-  display: flex;
   width: 100vw;
-  height: rem(60px);
-  padding: rem(20px) 0;
+  min-height: rem(60px);
   margin-bottom: rem(60px);
   background-color: #fff;
 
@@ -16,21 +14,7 @@
   ul.links {
     display: flex;
     list-style: none;
-  }
-
-  .nav-link {
-    position: relative;
-    margin-right: rem(30px);
-    color: #000;
-    font-weight: bold;
-    list-style: none;
-    transition: all 0.3s ease;
-    
-    &.active, &:hover {
-      color: $color-red_deep;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+    padding: 10px 0;
   }
 }
 

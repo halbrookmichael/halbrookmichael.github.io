@@ -6,19 +6,49 @@
 #portfolio {
 	
 	.portfolio-item {
-		padding: rem(0px) rem(10px);
+		display: block;
+		position: relative;
 		margin-bottom: rem(60px);
-		border-radius: rem(3px);
-		width: 33.3%;
+		list-style: none;
+		z-index: 0;
+		transition: all 0.3s ease;
 
-		&.card {
-			background-color: transparent;
-			border: none;
+		.highlight {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			background-color: rgba(60, 24, 116, .75);
+			transition: all 0.5s ease;
+
+			h2 {
+				color: $color-white;
+				margin: rem(10px) 0;
+				text-transform: uppercase;
+				font-size: rem(60px);
+				font-weight: bold;
+				-webkit-text-stroke: .5px $color-red_bright;
+				transform: translateY(100px);
+				transition: all 0.5s ease;
+			}
+		}
+		
+		&:hover .highlight {
+			opacity: 1;
+			transition: all 0.5s ease;
+
+			h2 {
+				transform: translateY(0px);
+				transition: all 0.5s ease;
+			}
 		}
 
 		img {
-			border: .5px solid $color-purple;
-			max-height: 225px;
+			border-radius: 3px;
+			width: 100%;
 		}
 
 		.description {
@@ -28,7 +58,7 @@
 
 	@media only screen and (max-width: rem(768px)) {
 		.portfolio-item {
-			width: 50%;
+			width: 100%;
 		}
 		.row {
 			justify-content: center;

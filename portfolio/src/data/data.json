@@ -7,7 +7,7 @@
 	},
 	"services": [
 		{
-			"service": "Web Development",
+			"service": "Web",
 			"icon": "code",
 			"description": "I create responsive, clean and user-friendly sites. I am proficient in HTML, CSS, SASS, Javascipt, and React.",
 			"btnText": "Web Projects"
@@ -27,39 +27,45 @@
 	],
 	"portfolio": [
 		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/b-side_new.png",
-			"title": "",
-			"description": "Hello",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/b-side-min.png",
+			"title": "B-Side Games",
+			"description": "",
+			"technologies": "",
 			"btnText": "View Detail"
 		},
 		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf.png",
-			"title": "",
-			"description": "Hello",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf-min.png",
+			"title": "WHWF Spokane",
+			"description": "",
+			"technologies": "",
 			"btnText": "View Detail"
 		},
 		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/aliengear.png",
-			"title": "",
-			"description": "Hello",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/aliengear-min.png",
+			"title": "Aliengear Holsters",
+			"description": "",
+			"technologies": "",
 			"btnText": "View Detail"
 		},
 		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/comics_kingdom.png",
-			"title": "",
-			"description": "Hello",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/ck-min.png",
+			"title": "Comics Kingdom",
+			"description": "",
+			"technologies": "",
 			"btnText": "View Detail"
 		},
 		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/T4MI.png",
-			"title": "",
-			"description": "Hello",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/t4mi-min.png",
+			"title": "T4MI",
+			"description": "",
+			"technologies": "",
 			"btnText": "View Detail"
 		},
 		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/a2e.png",
-			"title": "",
-			"description": "Hello",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/a2e-min.png",
+			"title": "Access2Experience",
+			"description": "",
+			"technologies": "",
 			"btnText": "View Detail"
 		}
 	
