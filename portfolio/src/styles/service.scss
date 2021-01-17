@@ -38,18 +38,37 @@
 	.view-more {
 		text-align: left;
 	}
-	
+
+	@media only screen and (max-width: rem(568px)) {
+		.service-head {
+			margin-right: 0px;
+			width: 100%;
+		}
+		.service-body {
+			width: 100%;
+		}
+		.view-more,
+		.view-more button {
+			width: 100%;
+		}
+	}
 }
 
-@media only screen and (max-width: rem(968px)) {
-	
-}
 @media only screen and (max-width: rem(767px)) {
 	.service {
 		padding: rem(20px) 0 rem(60px);
 		width: 100%;
 	}
 	.service-body {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: rem(568px)) {
+	.service {
+		flex-direction: column;
+	}
+	.service-head {
+		margin-right: 0px;
 		width: 100%;
 	}
 }
