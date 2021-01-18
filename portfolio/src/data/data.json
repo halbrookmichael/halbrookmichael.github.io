@@ -30,6 +30,7 @@
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/b-side-min.png",
 			"title": "B-Side Games",
 			"description": "",
+			"link": "https://www.bsideboardgamesandpuzzles.com/",
 			"technologies": [
 				{
 					"technology": "Wix"

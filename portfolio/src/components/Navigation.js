@@ -23,9 +23,10 @@ class Navigation extends Component {
 
     if(href[3] === '')
       document.querySelector('.home').classList.add('active');
-    else {
+    else if(href[3] === 'portfolioDetail')
+      document.querySelector('.portfolio').classList.add('active');
+    else
       document.querySelector(`.${href[3]}`).classList.add('active');
-    } 
   }
   handleLink(e) {
     let link = document.querySelectorAll('li a');
