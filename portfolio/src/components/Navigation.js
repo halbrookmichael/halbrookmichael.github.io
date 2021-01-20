@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavItem from './NavItem';
 
 import Hamburger from '../../node_modules/hamburger-react';
+import logo from '../img/altered_pixels_logo.svg'
 
 import '../styles/nav.scss';
 
@@ -51,17 +52,22 @@ class Navigation extends Component {
   render() {
 
     return (
-      <div className="main-nav">
-        <div className="mobile" onClick={this.handleMenu}>
-          <Hamburger />
-        </div>
-        <ul className={`links container ${this.state.isOpen ? 'open' : null}`}>
-          <NavItem addedClasses="home" item='Home' toLink='/' handleClick={this.handleLink} />
-          <NavItem addedClasses="portfolio" item='Portfolio' toLink='/portfolio' handleClick={this.handleLink} />
-          <NavItem addedClasses="about" item='About' toLink='/about' handleClick={this.handleLink} />
-          <NavItem addedClasses="testimonials" item='Testimonials' toLink='/testimonials' handleClick={this.handleLink} />
-          <NavItem addedClasses="contact" item='Contact' toLink='/contact' handleClick={this.handleLink} />
-        </ul>
+      <div className="main-nav ">
+        <nav className="nav-inner container">
+          <div className="mobile" onClick={this.handleMenu}>
+            <Hamburger />
+          </div>
+          <a href="/" className="logo ">
+            <img src={logo} alt=""/>
+          </a>
+          <ul className={`links ${this.state.isOpen ? 'open' : ''}`}>
+            <NavItem addedClasses="home" item='Home' toLink='/' handleClick={this.handleLink} />
+            <NavItem addedClasses="portfolio" item='Portfolio' toLink='/portfolio' handleClick={this.handleLink} />
+            <NavItem addedClasses="about" item='About' toLink='/about' handleClick={this.handleLink} />
+            <NavItem addedClasses="testimonials" item='Testimonials' toLink='/testimonials' handleClick={this.handleLink} />
+            <NavItem addedClasses="contact" item='Contact' toLink='/contact' handleClick={this.handleLink} />
+          </ul>
+        </nav>
       </div>
     );
   }

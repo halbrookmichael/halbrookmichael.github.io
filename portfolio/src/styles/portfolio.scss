@@ -5,13 +5,21 @@
 
 #portfolio {
 	
+
 	.portfolio-item {
 		display: block;
 		position: relative;
-		margin-bottom: rem(60px);
+		margin-bottom: rem(40px);
 		list-style: none;
 		z-index: 0;
 		transition: all 0.3s ease;
+
+		.border-bottom {
+			margin: 0 auto;
+			width: 25%;
+			padding-top: rem(40px);
+			border-bottom: .25px solid $color-red_bright;
+		}
 
 		.highlight {
 			position: absolute;

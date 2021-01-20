@@ -29,104 +29,49 @@
 		{
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/b-side-min.png",
 			"title": "B-Side Games",
-			"description": "",
+			"description": "This is that place where a description belongs!",
 			"link": "https://www.bsideboardgamesandpuzzles.com/",
-			"technologies": [
-				{
-					"technology": "Wix"
-				},
-				{
-					"technology": "jQuery"
-				},
-				{
-					"technology": "HTML"
-				}
-			],
+			"technologies": ["Wix", " jQuery", "HTML"],
 			"btnText": "View Detail"
 		},
 		{
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf-min.png",
 			"title": "WHWF Spokane",
 			"description": "",
-			"technologies": [
-				{
-					"technology": "Wix"
-				},
-				{
-					"technology": "jQuery"
-				},
-				{
-					"technology": "HTML"
-				}
-			],
+			"link": "https://www.bsideboardgamesandpuzzles.com/",
+			"technologies": ["Wix", "jQuery", "HTML"],
 			"btnText": "View Detail"
 		},
 		{
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/aliengear-min.png",
 			"title": "Aliengear Holsters",
 			"description": "",
-			"technologies": [
-				{
-					"technology": "Wix"
-				},
-				{
-					"technology": "jQuery"
-				},
-				{
-					"technology": "HTML"
-				}
-			],
+			"link": "https://www.bsideboardgamesandpuzzles.com/",
+			"technologies": ["Wix", "jQuery", "HTML"],
 			"btnText": "View Detail"
 		},
 		{
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/ck-min.png",
 			"title": "Comics Kingdom",
 			"description": "",
-			"technologies": [
-				{
-					"technology": "Wix"
-				},
-				{
-					"technology": "jQuery"
-				},
-				{
-					"technology": "HTML"
-				}
-			],
+			"link": "https://www.bsideboardgamesandpuzzles.com/",
+			"technologies": ["Wix", "jQuery", "HTML"],
 			"btnText": "View Detail"
 		},
 		{
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/t4mi-min.png",
 			"title": "T4MI",
 			"description": "",
-			"technologies": [
-				{
-					"technology": "Wix"
-				},
-				{
-					"technology": "jQuery"
-				},
-				{
-					"technology": "HTML"
-				}
-			],
+			"link": "https://www.bsideboardgamesandpuzzles.com/",
+			"technologies": ["Wix", "jQuery", "HTML"],
 			"btnText": "View Detail"
 		},
 		{
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/a2e-min.png",
 			"title": "Access2Experience",
 			"description": "",
-			"technologies": [
-				{
-					"technology": "Wix"
-				},
-				{
-					"technology": "jQuery"
-				},
-				{
-					"technology": "HTML"
-				}
-			],
+			"link": "https://www.bsideboardgamesandpuzzles.com/",
+			"technologies": ["Wix", "jQuery", "HTML"],
 			"btnText": "View Detail"
 		}
 	

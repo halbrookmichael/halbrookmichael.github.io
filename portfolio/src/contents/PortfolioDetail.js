@@ -13,6 +13,7 @@ class PortfolioDetail extends Component {
 			image: data ? data.img : localStorage.getItem('image'),
 			title: data ? data.title : localStorage.getItem('title'),
 			link: data ? data.link : localStorage.getItem('link'),
+			description: data ? data.description : localStorage.getItem('description'),
 			technologies: data ? data.technologies : localStorage.getItem('technologies')
 		}
 
@@ -20,28 +21,39 @@ class PortfolioDetail extends Component {
 			localStorage.setItem('image', data.img);
 			localStorage.setItem('title', data.title);
 			localStorage.setItem('link', data.link);
-			localStorage.setItem('technologies', data.technologies.values(data.technologies));
-		}		
-		
-		console.log(data)
+			localStorage.setItem('description', data.description);
+			localStorage.setItem('technologies', data.technologies);
+		}
 	}
 	
 	render() {
 		return (
 			<div id="portfolio-detail" className="container">
-				<a href={this.state.link}>{this.state.title}</a>
 				<img src={this.state.image} alt=""/>
 				<div className="detail">
-					<div>
-						<h3>Overview</h3>
-						<p>{this.state.description}</p>
-						{/* <ul className="technologies">
-							<h3>Technologies</h3>
-							{this.state.technologies.map((item, index) => (
-								<li key={index}>{item.technology}</li>
-							))}
-						</ul> */}
-					</div>
+					<h3>Overview</h3>
+					<a href={this.state.link}>{this.state.title}</a>
+					<p>{this.state.description}</p>
+					<h3>Technologies</h3>
+					{
+						Array.isArray(this.state.technologies)
+						?
+						<ul className="technologies">
+							{
+								this.state.technologies.map((item, index) => (
+									<li key={index}>{item}</li>
+								)) 
+							}
+						</ul>
+						: 
+						<div className="technologies">
+							{
+								this.state.technologies.split(',').map((item, index) => (
+									<p key={index}>{item}</p>
+								))
+							}
+						</div>	 
+					}
 				</div>
 			</div>
 		);	

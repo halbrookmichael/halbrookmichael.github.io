@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import Icon from '../components/Icon';
 
 import '../styles/service.scss';
@@ -14,7 +13,7 @@ const Service = (props) => {
 			<div className="service-body">
 				<p>{props.serviceDesc}</p>
 				<div className="view-more">
-					<Button classes="btn-primary">{props.btnText}</Button>
+					{/* <Button classes="btn-primary">{props.btnText}</Button> */}
 				</div>
 			</div>
 			

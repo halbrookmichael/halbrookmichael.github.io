@@ -2,65 +2,84 @@
 @import '../helpers/convertToRem';
 
 .main-nav {
-  width: 100vw;
+  width: 100%;
   min-height: rem(60px);
+  padding: rem(10px);
   margin-bottom: rem(60px);
   background-color: #fff;
 
-  .mobile {
-    display: none;
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+
+    .mobile {
+      display: none;
+    }
+
+    .logo {
+      min-width: 60px;
+    }
+
+    ul.links {
+      display: flex;
+      justify-content: space-between;
+      width: 85%;
+      list-style: none;
+      margin: auto 0;
+    }
   }
 
-  ul.links {
-    display: flex;
-    list-style: none;
-    padding: 10px 0;
-  }
+ 
 }
 
 @media only screen and (max-width: rem(660px)) {
   .main-nav {
     margin-bottom: rem(30px);
 
-    .mobile {
-      display: block;
-      position: absolute;
-      top: rem(6px);
-      right: rem(15px);
-      z-index: 1000;
+    .nav-inner {
+      .mobile {
+        display: block;
+        position: absolute;
+        top: rem(16px);
+        right: rem(15px);
+        z-index: 1000;
 
-      .hamburger-react {
-        transform: none !important;
-        width: 100% !important;
+        .hamburger-react {
+          transform: none !important;
+          width: 100% !important;
 
-        div {
-          right: rem(0px);
-          left: auto !important;
+          div {
+            right: rem(0px);
+            left: auto !important;
+          }
+        }
+      }
+
+      ul.links {
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        opacity: 0;
+        background-color: $color-white;
+        transform: translateX(rem(-1000px));
+        transition: all 0.5s ease;
+        z-index: -1;
+        
+      
+        &.open {
+          opacity: 1;
+          transform: translateX(rem(-25px));
+          transition: all 0.5s ease;
+          z-index: 99;
         }
       }
     }
 
-    ul.links {
-      position: fixed;
-      flex-direction: column;
-      align-items: center;
-      top: 0;
-      width: 80%;
-      height: 100vh;
-      padding: 20px;
-      opacity: 0;
-      background-color: $color-white;
-      transform: translateX(rem(-1000px));
-      transition: all 0.5s ease;
-      z-index: -1;
-      
-    
-      &.open {
-        opacity: 1;
-        transform: translateX(rem(0px));
-        transition: all 0.5s ease;
-        z-index: 99;
-      }
-    }
+   
   }
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Button} from 'react-bootstrap';
 
 import '../styles/home.scss';
 import data from '../data/data.json'; 
@@ -22,9 +21,9 @@ class Home extends Component {
 						<p>{data.home.about}</p>
 					</div>
 					<a href="/contact">
-						<Button>
+						{/* <Button>
 							Let's Chat
-						</Button>
+						</Button> */}
 					</a>
 				</div>
 				<div className="content">

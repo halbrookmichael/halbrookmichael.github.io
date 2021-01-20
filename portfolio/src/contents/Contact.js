@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 
 import '../styles/contact.scss';
 
@@ -24,7 +22,7 @@ class Contact extends Component {
 	render() {
 		return (
 			<section id="contact" className="container">
-				<Form method="post" enctype="text/plain">
+				{/* <Form method="post" enctype="text/plain">
 					<Form.Group controlId="formBasicEmail">
 						<Form.Control type="email" placeholder="Email address" />
 						<Form.Text className="text-muted">
@@ -38,7 +36,7 @@ class Contact extends Component {
 					<Button variant="primary" type="submit">
 							Submit
 					</Button>
-					</Form>
+					</Form> */}
 			</section>
 		)
 	}
