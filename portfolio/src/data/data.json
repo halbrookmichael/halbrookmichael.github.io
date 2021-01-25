@@ -27,7 +27,8 @@
 	],
 	"portfolio": [
 		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/b-side-min.png",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside.png",
+			"imgMobile": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside_mobile.png",
 			"title": "B-Side Games",
 			"description": "This is that place where a description belongs!",
 			"link": "https://www.bsideboardgamesandpuzzles.com/",
@@ -35,44 +36,31 @@
 			"btnText": "View Detail"
 		},
 		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf-min.png",
+			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf.png",
 			"title": "WHWF Spokane",
 			"description": "",
-			"link": "https://www.bsideboardgamesandpuzzles.com/",
+			"link": "https://www.whwfspokane.org/",
 			"technologies": ["Wix", "jQuery", "HTML"],
 			"btnText": "View Detail"
+		}
+	
+	],
+	"testimonials": [
+		{
+			"img": "",
+			"author": "Ryan Paburn",
+			"position": "Owner",
+			"company": "B-Side Games",
+			"testimonial": "B-Side Testimonial"
 		},
 		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/aliengear-min.png",
-			"title": "Aliengear Holsters",
-			"description": "",
-			"link": "https://www.bsideboardgamesandpuzzles.com/",
-			"technologies": ["Wix", "jQuery", "HTML"],
-			"btnText": "View Detail"
-		},
-		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/ck-min.png",
-			"title": "Comics Kingdom",
-			"description": "",
-			"link": "https://www.bsideboardgamesandpuzzles.com/",
-			"technologies": ["Wix", "jQuery", "HTML"],
-			"btnText": "View Detail"
-		},
-		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/t4mi-min.png",
-			"title": "T4MI",
-			"description": "",
-			"link": "https://www.bsideboardgamesandpuzzles.com/",
-			"technologies": ["Wix", "jQuery", "HTML"],
-			"btnText": "View Detail"
-		},
-		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/a2e-min.png",
-			"title": "Access2Experience",
-			"description": "",
-			"link": "https://www.bsideboardgamesandpuzzles.com/",
-			"technologies": ["Wix", "jQuery", "HTML"],
-			"btnText": "View Detail"
+			"img": "",
+			"author": "Geneva Johns-Kloor",
+			"position": "Operational Manager",
+			"company": "Women Helping Women Fund",
+			"testimonialPOne": "\"Michael really came through for Women Helping Women Fund when we needed a developer for our Wix site. We had spoken to six other vendors (some even certified as Wix friendly) and he was the only one willing to take on our project without changing the scope.",
+			"testimonialPTwo": "It was important to us that we use the code provided by our database provider for the forms on our site. Other vendors would only take on the project if we would settle for a workaround solution, but Michael made it happen. He was able to get the forms up and running while also making them look visually appealing. He listened to our needs and produced great results despite the weird quirks we found with the Wix platform.",
+			"testimonialPThree": " He also helped us to optimize our site and fix some other pieces that were giving our staff some trouble. He was very responsive and a great communicator through the whole process. He went above and beyond on our project.\""
 		}
 	
 	]

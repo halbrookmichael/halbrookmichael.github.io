@@ -9,20 +9,19 @@ const portfolioItems = data.portfolio;
 const PortfolioItem = (props) => {
 
 	return (
-		<div>
+		<div className="portfolio-items">
 			{portfolioItems.map((item, index) => (
-				<Link className="portfolio-item" key={index} 
+				<Link key={index} 
 					to={{
 						pathname: '/portfolioDetail',
 						data: item
 					}}>
-					<div>
+					<div className="portfolio-item">
 						<div className="highlight">
 							<h2>{item.title}</h2>
 						</div>
 						<img src={item.img} alt='' />
 					</div>
-				<div className="border-bottom"></div>
 				</Link>
 			))}
 			

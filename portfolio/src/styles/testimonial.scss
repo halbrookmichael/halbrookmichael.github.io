@@ -1,0 +1,26 @@
+@import '../variables/colors';
+
+#testimonials {
+    
+    .testimonial {
+        padding-bottom: 20px;
+        border-bottom: .25px solid $color-red_deep;
+
+        .testimonial-inner {
+            padding: 0 20px;
+
+            .testimonial-name {
+                font-weight: bold;
+
+                .position {
+                    margin-bottom: 0;
+                }
+            }
+
+            .testimonial-text {
+                font-style: italic;
+            }
+        }
+       
+    }
+}

@@ -9,7 +9,8 @@ const NavItem = (props) => {
               pathname: props.toLink,
               data: props.data
             }} 
-            onClick={props.handleClick}>{props.item}
+            onClick={props.handleClick}>
+        {props.item}
       </Link> 
     </li>
   );

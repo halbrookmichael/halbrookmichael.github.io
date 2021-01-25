@@ -11,7 +11,7 @@ class Navigation extends Component {
     super(props);
 
     this.state = {
-      isOpen: false,
+      isOpen: false
     }
 
     this.handleLink = this.handleLink.bind(this);
@@ -32,7 +32,10 @@ class Navigation extends Component {
   handleLink(e) {
     let link = document.querySelectorAll('li a');
     let currentLink = e.target;
-    this.setState({ isOpen: !this.state.isOpen });
+    
+    this.setState({ isOpen: false });
+    this.forceUpdate();
+    console.log(this.props.toggled)
 
     link.forEach((item) => {
       item.classList.remove('active');
@@ -41,12 +44,9 @@ class Navigation extends Component {
     currentLink.classList.add('active');
   }
   handleMenu() {
-    let links = document.querySelector('.links');
-
-    if(!links.classList.contains('open')) 
-      this.setState({ isOpen: true });
-    else if(links.classList.contains('open'))
-      this.setState({ isOpen: false });
+    console.log('called')
+    this.setState({ isOpen: !this.state.isOpen });
+    console.log(this.state.isOpen)
   }
 
   render() {
@@ -55,14 +55,14 @@ class Navigation extends Component {
       <div className="main-nav ">
         <nav className="nav-inner container">
           <div className="mobile" onClick={this.handleMenu}>
-            <Hamburger />
+            <Hamburger label="show menu" />
           </div>
           <a href="/" className="logo ">
             <img src={logo} alt=""/>
           </a>
           <ul className={`links ${this.state.isOpen ? 'open' : ''}`}>
             <NavItem addedClasses="home" item='Home' toLink='/' handleClick={this.handleLink} />
-            <NavItem addedClasses="portfolio" item='Portfolio' toLink='/portfolio' handleClick={this.handleLink} />
+            <NavItem addedClasses="portfolio" item='Work' toLink='/portfolio' handleClick={this.handleLink} />
             <NavItem addedClasses="about" item='About' toLink='/about' handleClick={this.handleLink} />
             <NavItem addedClasses="testimonials" item='Testimonials' toLink='/testimonials' handleClick={this.handleLink} />
             <NavItem addedClasses="contact" item='Contact' toLink='/contact' handleClick={this.handleLink} />

@@ -11,6 +11,7 @@ class PortfolioDetail extends Component {
 
 		this.state = {
 			image: data ? data.img : localStorage.getItem('image'),
+			imageMobile: data ? data.imgMobile : localStorage.getItem('imageMobile'),
 			title: data ? data.title : localStorage.getItem('title'),
 			link: data ? data.link : localStorage.getItem('link'),
 			description: data ? data.description : localStorage.getItem('description'),
@@ -19,6 +20,7 @@ class PortfolioDetail extends Component {
 
 		if(data) {
 			localStorage.setItem('image', data.img);
+			localStorage.setItem('imageMobile', data.imgMobile);
 			localStorage.setItem('title', data.title);
 			localStorage.setItem('link', data.link);
 			localStorage.setItem('description', data.description);
@@ -29,10 +31,20 @@ class PortfolioDetail extends Component {
 	render() {
 		return (
 			<div id="portfolio-detail" className="container">
-				<img src={this.state.image} alt=""/>
+				<div className="port-images">
+					<img src={this.state.image} alt=""/>
+					{
+						this.state.imageMobile 
+						?
+						<img src={this.state.imageMobile} alt=""/> 
+						:
+						null
+					}
+					
+				</div>
 				<div className="detail">
 					<h3>Overview</h3>
-					<a href={this.state.link}>{this.state.title}</a>
+					<a className="nav-link" href={this.state.link}>{this.state.title}</a>
 					<p>{this.state.description}</p>
 					<h3>Technologies</h3>
 					{

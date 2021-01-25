@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import ContactForm from '../components/contactForm';
+
 import '../styles/contact.scss';
 
 class Contact extends Component {
@@ -21,23 +23,9 @@ class Contact extends Component {
 	
 	render() {
 		return (
-			<section id="contact" className="container">
-				{/* <Form method="post" enctype="text/plain">
-					<Form.Group controlId="formBasicEmail">
-						<Form.Control type="email" placeholder="Email address" />
-						<Form.Text className="text-muted">
-							I'll never share your email with anyone else.
-						</Form.Text>
-					</Form.Group>
-
-					<Form.Group controlId="formTextArea">
-						<Form.Control as="textarea" type="text" placeholder="Tell me what's needed" />
-					</Form.Group>
-					<Button variant="primary" type="submit">
-							Submit
-					</Button>
-					</Form> */}
-			</section>
+			<div id="contact" className="container">
+				<ContactForm />
+			</div>
 		)
 	}
 }

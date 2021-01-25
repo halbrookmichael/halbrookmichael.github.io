@@ -4,74 +4,81 @@
 @import '../helpers/convertToRem';
 
 #portfolio {
-	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-	.portfolio-item {
-		display: block;
-		position: relative;
-		margin-bottom: rem(40px);
+	.portfolio-items {
+		display: flex;
 		list-style: none;
 		z-index: 0;
 		transition: all 0.3s ease;
-
-		.border-bottom {
-			margin: 0 auto;
-			width: 25%;
-			padding-top: rem(40px);
-			border-bottom: .25px solid $color-red_bright;
-		}
-
-		.highlight {
-			position: absolute;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 100%;
-			width: 100%;
-			text-align: center;
-			opacity: 0;
-			background-color: rgba(60, 24, 116, .75);
-			transition: all 0.5s ease;
-
-			h2 {
-				color: $color-white;
-				margin: rem(10px) 0;
-				text-transform: uppercase;
-				font-size: rem(60px);
-				font-weight: bold;
-				-webkit-text-stroke: .5px $color-red_bright;
-				transform: translateY(100px);
-				transition: all 0.5s ease;
-			}
-		}
 		
-		&:hover .highlight {
-			opacity: 1;
-			transition: all 0.5s ease;
 
-			h2 {
-				transform: translateY(0px);
+		.portfolio-item {
+			position: relative;
+			margin-bottom: rem(40px);
+			// padding: 0 10px;
+			width: 95%;
+
+
+			.highlight {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				width: 100%;
+				padding: 0 10px;
+
+				text-align: center;
+				opacity: 0;
+				background-color: rgba(60, 24, 116, .75);
 				transition: all 0.5s ease;
+
+				h2 {
+					color: $color-white;
+					margin: rem(10px) 0;
+					text-transform: uppercase;
+					font-size: rem(60px);
+					font-weight: bold;
+					-webkit-text-stroke: .5px $color-red_bright;
+					transform: translateY(100px);
+					transition: all 0.5s ease;
+				}
 			}
-		}
+			
+			&:hover .highlight {
+				opacity: 1;
+				transition: all 0.5s ease;
 
-		img {
-			border-radius: 3px;
-			width: 100%;
-		}
+				h2 {
+					transform: translateY(0px);
+					transition: all 0.5s ease;
+				}
+			}
 
-		.description {
-			color: $color-white;
+			img {
+				border-radius: 3px;
+				width: 100%;
+			}
+
+			.description {
+				color: $color-white;
+			}
 		}
 	}
 
 	@media only screen and (max-width: rem(768px)) {
-		.portfolio-item {
-			width: 100%;
+		.portfolio-items {
+			flex-wrap: wrap;
+
+			.portfolio-item {
+				padding: 0;
+				width: 100%;
+			}
 		}
-		.row {
-			justify-content: center;
-		}
+		
 	}
 	@media only screen and (max-width: rem(568px)) {
 		.portfolio-item {
