@@ -1,27 +1,23 @@
 {
 	"home": {
-		"title": "Hi, I'm Michael",
-		"tagline": "I develop clean and user friendly websites, solve client problems and create awesome designs.",
-		"about": "My overall goal is to help my clients reach theirs. While working in the agency world I have created responsive and user-friendly websites, dynamic and intuitive mobile applications and worked with multiple libraries and frameworks. Have a problem that needs to be solved?",
-		"aboutTitle": "The Goal"
+		"titleOne": "The",
+		"titleTwo": "Goal",
+		"tagline": "Help my clients reach theirs. While working in the agency world I have created responsive and user-friendly websites, dynamic and intuitive mobile applications and worked with multiple libraries and frameworks. Have a problem that needs to be solved?"
 	},
 	"services": [
 		{
-			"service": "Web",
-			"icon": "code",
-			"description": "I create responsive, clean and user-friendly sites. I am proficient in HTML, CSS, SASS, Javascipt, and React.",
+			"service": "Dev",
+			"description": "Responsive, clean and user-friendly that will keep people coming back.",
 			"btnText": "Web Projects"
 		},
 		{
 			"service": "Design",
-			"icon": "swatchbook",
-			"description": "I like to keep things clean and simple. Intuitive for the user and easy on the eyes.",
+			"description": "Clean and simple. Intuitive for the user and easy on the eyes.",
 			"btnText": "Design Projects"
 		},
 		{
-			"service": "Creation",
-			"icon": "vector-square",
-			"description": "I never want to limit myself to a medium. I like to explore and be creative. ",
+			"service": "Social Media",
+			"description": "Create fresh and engaging social media posts to all of your accounts, so you can do the work you NEED to do!",
 			"btnText": "Other Projects"
 		}
 	],
@@ -51,7 +47,7 @@
 			"author": "Ryan Paburn",
 			"position": "Owner",
 			"company": "B-Side Games",
-			"testimonial": "B-Side Testimonial"
+			"testimonialPOne": "\"We want to tell you about the work Michael Halbrook did for us and the great results it brought to our company.  First off Michael was very professional and came to us with great ideas to help our internet business grow and look more professional.  The prices were very fair and generous for the work he put forth.  His work alone increased our Web Presence by 38% and our sales increased by 27% for web orders.  I would highly recommend him any and all companies that want to increase web orders and web presence.\""
 		},
 		{
 			"img": "",

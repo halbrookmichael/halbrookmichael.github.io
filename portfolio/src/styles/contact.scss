@@ -1,12 +1,8 @@
 
 @import '../variables/colors';
-@import '../helpers/convertToRem';
 
 #contact {
-
-    form {
-        margin: 0 auto;
-        width: 100%;
-        max-width: rem(600px);
-    }
+	margin: 0 auto;
+	width: 100%;
+	max-width: 600px;
 }

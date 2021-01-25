@@ -64,8 +64,8 @@ class Navigation extends Component {
             <NavItem addedClasses="home" item='Home' toLink='/' handleClick={this.handleLink} />
             <NavItem addedClasses="portfolio" item='Work' toLink='/portfolio' handleClick={this.handleLink} />
             <NavItem addedClasses="about" item='About' toLink='/about' handleClick={this.handleLink} />
-            <NavItem addedClasses="testimonials" item='Testimonials' toLink='/testimonials' handleClick={this.handleLink} />
-            <NavItem addedClasses="contact" item='Contact' toLink='/contact' handleClick={this.handleLink} />
+            <NavItem addedClasses="testimonials" item='Happy Clients' toLink='/testimonials' handleClick={this.handleLink} />
+            {/* <NavItem addedClasses="contact" item='Contact' toLink='/contact' handleClick={this.handleLink} /> */}
           </ul>
         </nav>
       </div>

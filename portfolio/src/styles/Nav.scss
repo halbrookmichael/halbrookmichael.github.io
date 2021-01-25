@@ -1,11 +1,9 @@
 @import '../variables/colors';
-@import '../helpers/convertToRem';
 
 .main-nav {
   width: 100%;
-  min-height: rem(60px);
-  padding: rem(10px);
-  margin-bottom: rem(60px);
+  min-height: 60px;
+  padding: 10px;
   background-color: #fff;
 
   .nav-inner {
@@ -34,16 +32,16 @@
  
 }
 
-@media only screen and (max-width: rem(660px)) {
+@media only screen and (max-width: 660px) {
   .main-nav {
-    margin-bottom: rem(30px);
+    margin-bottom: 30px;
 
     .nav-inner {
       .mobile {
         display: block;
         position: absolute;
-        top: rem(16px);
-        right: rem(15px);
+        top: 16px;
+        right: 15px;
         z-index: 1000;
 
         .hamburger-react {
@@ -51,7 +49,7 @@
           width: 100% !important;
 
           div {
-            right: rem(0px);
+            right: 0px;
             left: auto !important;
           }
         }
@@ -68,14 +66,14 @@
         padding: 20px;
         opacity: 0;
         background-color: $color-white;
-        transform: translateX(rem(-1000px));
+        transform: translateX(-100px);
         transition: all 0.5s ease;
         z-index: -1;
         
       
         &.open {
           opacity: 1;
-          transform: translateX(rem(-25px));
+          transform: translateX(-25px);
           transition: all 0.5s ease;
           z-index: 99;
         }

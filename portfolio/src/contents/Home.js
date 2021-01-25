@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import '../styles/home.scss';
 import data from '../data/data.json'; 
 import Service from '../components/Service';
+import ContactForm from '../components/ContactForm';
 
 const services = data.services;
 
@@ -11,28 +12,20 @@ class Home extends Component {
 	render() {
 		return (
 			<div id="home">
-				<div className="head content container">
-					<h1>{data.home.title}</h1>
+				<section className="head container">
+					<h1>{data.home.titleOne} <br/> {data.home.titleTwo}</h1>
 					<h4>{data.home.tagline}</h4>
-				</div>
-				<div className="content about container">
-					<div className="about-text">
-						<h2>{data.home.aboutTitle}</h2>
-						<p>{data.home.about}</p>
-					</div>
-					<a href="/contact">
-						{/* <Button>
-							Let's Chat
-						</Button> */}
-					</a>
-				</div>
-				<div className="content">
-					<div className="services">
+				</section>
+				<section className="services-container">
+					<div className="services container">
 						{services.map((service, index) => (
 							<Service key={index} className="col-sm" iconColor="#205493" service={service.service} icon={service.icon} serviceDesc={service.description} btnText={service.btnText} />
 						))}
 					</div>
-				</div>
+				</section>
+				<section className="container">
+					<ContactForm />
+				</section>
 			</div>
 		)
 	}

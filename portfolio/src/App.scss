@@ -1,16 +1,22 @@
-@import-normalize;
-@import './mixins/spacing';
 @import './variables/colors';
-@import './helpers/convertToRem';
 @import './styles/button.scss';
 
 .App {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding-bottom: rem(120px);
+  padding-bottom: 120px;
   overflow: hidden;
   background-color: $color-cloud;
+
+  .main {
+    width: 100%;
+    height: 100%;
+
+    section {
+      padding: 120px 0;
+    }
+  }
 
   .head p,
   h1, h2, h3, h4 {
@@ -21,19 +27,12 @@
   }
   
 }
-.main {
-  width: 100%;
-  height: 100%;
-}
-.content {
-	@include spacingSectionBottom;
-}
+
 ul {
   list-style: none;
 }
 .nav-link {
   position: relative;
-  // margin-right: rem(30px);
   color: #000;
   font-weight: bold;
   list-style: none;

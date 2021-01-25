@@ -1,7 +1,5 @@
-@import '../mixins/spacing';
 @import '../mixins/positioning';
 @import '../variables/colors';
-@import '../helpers/convertToRem';
 
 #portfolio {
 	display: flex;
@@ -17,8 +15,7 @@
 
 		.portfolio-item {
 			position: relative;
-			margin-bottom: rem(40px);
-			// padding: 0 10px;
+			margin-bottom: 40px;
 			width: 95%;
 
 
@@ -38,9 +35,9 @@
 
 				h2 {
 					color: $color-white;
-					margin: rem(10px) 0;
+					margin: 10px 0;
 					text-transform: uppercase;
-					font-size: rem(60px);
+					font-size: 60px;
 					font-weight: bold;
 					-webkit-text-stroke: .5px $color-red_bright;
 					transform: translateY(100px);
@@ -69,7 +66,7 @@
 		}
 	}
 
-	@media only screen and (max-width: rem(768px)) {
+	@media only screen and (max-width: 768px) {
 		.portfolio-items {
 			flex-wrap: wrap;
 
@@ -80,10 +77,10 @@
 		}
 		
 	}
-	@media only screen and (max-width: rem(568px)) {
+	@media only screen and (max-width: 568px) {
 		.portfolio-item {
 			width: 100%;
-			margin-bottom: rem(30px);
+			margin-bottom: 30px;
 		}
 		.row {
 			justify-content: center;

@@ -1,27 +1,22 @@
 @import '../mixins/positioning';
-@import '../helpers/convertToRem';
 @import '../variables/colors';
 
 .service {
-	display: flex;
-	align-items: center;
+	width: 33.3%;
 	position: relative;
-	padding: rem(20px) rem(0px);
+	padding: 20px 0px;
 	
 	p {
 		color: $color-white;
 	}
 
 	.service-head {
-		text-align: center;
-		margin-right: 60px;
-		width: 10%;
 
 		.service-title {
-			font-size: rem(24px);
+			font-size: 32px;
 			text-transform: uppercase;
 			font-weight: bold;
-			line-height: rem(32px);
+			line-height: 32px;
 		}
 
 		svg {
@@ -30,8 +25,7 @@
 	}
 
 	.service-body {
-		width: 75%;
-		font-size: rem(28px);
+		font-size: 20px;
 		line-height: 1.5;
 	}
 
@@ -39,7 +33,7 @@
 		text-align: left;
 	}
 
-	@media only screen and (max-width: rem(568px)) {
+	@media only screen and (max-width: 568px) {
 		.service-head {
 			margin-right: 0px;
 			width: 100%;
@@ -54,16 +48,16 @@
 	}
 }
 
-@media only screen and (max-width: rem(767px)) {
+@media only screen and (max-width: 767px) {
 	.service {
-		padding: rem(20px) 0 rem(60px);
+		padding: 20px 0 60px;
 		width: 100%;
 	}
 	.service-body {
 		width: 100%;
 	}
 }
-@media only screen and (max-width: rem(568px)) {
+@media only screen and (max-width: 568px) {
 	.service {
 		flex-direction: column;
 	}

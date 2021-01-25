@@ -1,77 +1,42 @@
-@import '../mixins/spacing';
 @import '../mixins/positioning';
 @import '../variables/colors';
-@import '../helpers/convertToRem';
 
 #home {
-	width: 100%;
 
 	.head {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		padding-bottom: rem(20px);
-		border-bottom: .5px solid $color-red_deep;
 
 		h1 {
-			width: 50%;
+			width: 30%;
+			font-size: 80px;
 			font-weight: bold;
 		}
 		h4 {
-			width: 50%;
-			font-size: rem(20px);
+			width: 70%;
 			color: $color-purple_grey;
 		}
 
-		@media only screen and (max-width: rem(660px)) {
+		@media only screen and (max-width: 660px) {
 			h1, h4 {
 				width: 100%;
 			}
 		}
 	}
 
-	.about {
+	.services-container {
+		background-color: rgba(60, 24, 116, .75);
 
-		width: 100%;
-
-		.about-text {
-			display: block;
-			text-align: left;
-
-			h2 {
-				font-weight: bold;
-			}
-
-			p {
-				font-size: rem(20px);
-			}
-
-			@media only screen and (max-width: rem(660px)) {
-			p {
-				font-size: rem(18px);
-			}
-		}
-		}
-
-		button {
-			width: auto;
-			text-align: center;
-		}
-
-		@media only screen and (max-width: rem(660px)) {
-			.about-text {
-				width: 100%;
-			}
+		.services {
+			display: flex;
+			align-items: flex-start;
+			padding: 20px 0;
 		}
 	}
 
-	.services {
-		padding: rem(20px) 0;
-		background-color:$color-purple_grey;
-	}
-
-	@media only screen and (max-width: rem(968px)) {
+	@media only screen and (max-width: 968px) {
 		.services {
 			justify-content: center;
 		}
