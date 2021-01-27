@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../components/Icon';
+// import Icon from '../components/Icon';
 
 import '../styles/service.scss';
 
@@ -7,7 +7,6 @@ const Service = (props) => {
 	return (
 		<div className="service container">
 			<div className="service-head">
-				<Icon icon={props.icon} size="4x" />
 				<p className="service-title">{props.service}</p>
 			</div>
 			<div className="service-body">

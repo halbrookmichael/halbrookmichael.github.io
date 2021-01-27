@@ -6,7 +6,8 @@ import Footer from './components/Footer';
 // layouts
 import Home from './contents/Home';
 import Portfolio from './contents/Portfolio';
-import PortfolioDetail from './contents/PortfolioDetail';
+import PortfolioDetailWeb from './contents/PortfolioDetailWeb';
+import PortfolioDetailDesign from './contents/PortfolioDetailDesign';
 import Testimonials from './contents/Testimonials';
 import About from './contents/About';
 // import Contact from './contents/Contact';
@@ -24,7 +25,8 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/portfolio' component={Portfolio} />
-          <Route path='/portfolioDetail' component={PortfolioDetail} />
+          <Route path='/portfolioDetailWeb' component={PortfolioDetailWeb} />
+          <Route path='/portfolioDetailDesign' component={PortfolioDetailDesign} />
           <Route path='/about' component={About} />
           <Route path='/testimonials' component={Testimonials} />
           {/* <Route path='/contact' component={Contact} /> */}

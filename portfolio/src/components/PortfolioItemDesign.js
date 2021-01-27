@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 import '../styles/home.scss';
 import data from '../data/data.json'; 
 
-const portfolioItems = data.portfolio;
+const portfolioItems = data.portfolio.design;
 
-const PortfolioItem = (props) => {
+const PortfolioItemDesign = (props) => {
 
 	return (
 		<div className="portfolio-items">
 			{portfolioItems.map((item, index) => (
 				<Link key={index} 
 					to={{
-						pathname: '/portfolioDetail',
+						pathname: 'portfolioDetailDesign',
 						data: item
 					}}>
 					<div className="portfolio-item">
@@ -29,4 +29,4 @@ const PortfolioItem = (props) => {
 	)
 }
 
-export default PortfolioItem;
+export default PortfolioItemDesign;

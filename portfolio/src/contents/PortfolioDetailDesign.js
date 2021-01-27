@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import '../styles/portfolio-detail.scss';
 
-class PortfolioDetail extends Component {
+class PortfolioDetailDesign extends Component {
 	constructor(props) {
 		super(props);
 
@@ -33,18 +33,10 @@ class PortfolioDetail extends Component {
 			<div id="portfolio-detail" className="container">
 				<div className="port-images">
 					<img src={this.state.image} alt=""/>
-					{
-						this.state.imageMobile 
-						?
-						<img src={this.state.imageMobile} alt=""/> 
-						:
-						null
-					}
-					
 				</div>
 				<div className="detail">
-					<h3>Overview</h3>
 					<a className="nav-link" href={this.state.link}>{this.state.title}</a>
+					<h3>The Ask</h3>
 					<p>{this.state.description}</p>
 					<h3>Technologies</h3>
 					{
@@ -72,4 +64,4 @@ class PortfolioDetail extends Component {
 	}
 }
 
-export default PortfolioDetail;
+export default PortfolioDetailDesign;

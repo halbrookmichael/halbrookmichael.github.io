@@ -4,9 +4,9 @@ import '../styles/footer.scss'
 
  const Footer = (props) => {
 	return (
-		<section id="footer" className="container">
-			<div className="footer-content">
-				<p className="copyright">&copy; Michael Halbrook</p>
+		<section id="footer">
+			<div className="footer-content container">
+				<p className="copyright">&copy; Altered Pixels. All rights reserved.</p>
 				<p className="email">halbrookmichael@gmail.com</p>
 				<div className="social">* * * *</div>
 			</div>

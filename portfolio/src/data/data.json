@@ -1,53 +1,76 @@
 {
 	"home": {
-		"titleOne": "The",
-		"titleTwo": "Goal",
-		"tagline": "Helping small business owners create a strong web presence."
+		"title": "The Goal",
+		"tagline": "Helping small business owners create a strong web presence.",
+		"bg": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/pexels-mateusz-dach-450035-min.jpg"
 	},
 	"services": [
 		{
 			"service": "Dev",
-			"description": "Responsive, clean and user-friendly that will keep people coming back.",
+			"description": "Every business needs to make a strong first impression and your website is the first thing many people will see. Our focus is to build responsive, clean and user-friendly websites that will keep people coming back.",
 			"btnText": "Web Projects"
 		},
 		{
 			"service": "Design",
-			"description": "Clean and simple. Intuitive for the user and easy on the eyes.",
+			"description": "From custom social media posts to layout design. We create clean and simple. Intuitive for the user and easy on the eyes.",
 			"btnText": "Design Projects"
 		},
 		{
 			"service": "Social Media",
-			"description": "Create fresh and engaging social media posts to all of your accounts, so you can do the work you NEED to do!",
+			"description": "Your busy and you most likely don't have time to focus on multiple social accounts. Let us create fresh and engaging social media posts to all of your accounts, so you can do the work you NEED to do!",
 			"btnText": "Other Projects"
 		}
 	],
-	"portfolio": [
-		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside.png",
-			"imgMobile": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside_mobile.png",
-			"title": "B-Side Games",
-			"description": "This is that place where a description belongs!",
-			"link": "https://www.bsideboardgamesandpuzzles.com/",
-			"technologies": ["Wix", " jQuery", "HTML"],
-			"btnText": "View Detail"
-		},
-		{
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf.png",
-			"title": "WHWF Spokane",
-			"description": "",
-			"link": "https://www.whwfspokane.org/",
-			"technologies": ["Wix", "jQuery", "HTML"],
-			"btnText": "View Detail"
-		}
-	
-	],
+	"portfolio": {
+		"web": [
+			{
+				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside.png",
+				"imgMobile": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside_mobile.png",
+				"title": "B-Side Games",
+				"description": "A complete redesign was needed to help B-Side's web presence",
+				"link": "https://www.bsideboardgamesandpuzzles.com/",
+				"technologies": ["Wix", " jQuery", "HTML"],
+				"btnText": "View Detail",
+				"type": "web"
+			},
+			{
+				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf.png",
+				"title": "WHWF Spokane",
+				"description": "",
+				"link": "https://www.whwfspokane.org/",
+				"technologies": ["Wix", "jQuery", "HTML"],
+				"btnText": "View Detail",
+				"type": "web"
+			}
+		],
+		"design": [
+			{
+				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/magic_sneak_peak-min.png",
+				"title": "FB Magic! Post",
+				"description": "A complete redesign was needed to help B-Side's web presence",
+				"link": "https://www.bsideboardgamesandpuzzles.com/",
+				"technologies": ["Wix", " jQuery", "HTML"],
+				"btnText": "View Detail",
+				"type": "design"
+			},
+			{
+				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/win_a_box_tournament-min.png",
+				"title": "FB Yu-Gi-Oh! Post",
+				"description": "",
+				"link": "https://www.whwfspokane.org/",
+				"technologies": ["Wix", "jQuery", "HTML"],
+				"btnText": "View Detail",
+				"type": "design"
+			}
+		]
+	},
 	"testimonials": [
 		{
 			"img": "",
 			"author": "Ryan Paburn",
 			"position": "Owner",
 			"company": "B-Side Games",
-			"testimonialPOne": "\"We want to tell you about the work Michael Halbrook did for us and the great results it brought to our company.  First off Michael was very professional and came to us with great ideas to help our internet business grow and look more professional.  The prices were very fair and generous for the work he put forth.  His work alone increased our Web Presence by 38% and our sales increased by 27% for web orders.  I would highly recommend him any and all companies that want to increase web orders and web presence.\""
+			"testimonialPOne": "\"We want to tell you about the work Michael Halbrook did for us and the great results it brought to our company. First off, Michael was very professional and came to us with great ideas to help our internet business grow and look more professional. The prices were very fair and generous for the work he put forth. His work alone increased our Web Presence by 38% and our sales increased by 27% for web orders. I would highly recommend him to any and all companies that want to increase web orders and web presence.\""
 		},
 		{
 			"img": "",

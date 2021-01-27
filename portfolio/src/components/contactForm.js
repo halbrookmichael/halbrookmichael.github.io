@@ -4,26 +4,31 @@ import '../styles/form.scss';
 
 const ContactForm = (props) => {
 	return (
-		<form action="">
+		<form className="container" action="">
+			<h4 className="form-header">Ready to start?</h4>
 			<section className="client-info">
-				<h4 className="form-section-header"> Tell Us About Yourself</h4>
-				<div className="name">
-						<div className="form-group">
-							<label htmlFor="name">First Name:</label>
-							<input type="text" name="lastname" id="lastName"/>
-						</div>
-						<div className="form-group">
-							<label htmlFor="name">Last Name:</label>
-							<input type="text" name="firstname" id="firstName"/>
-						</div>
+				<div className="name multi-input">
+					<div className="form-group">
+						{/* <label htmlFor="name">First Name:</label> */}
+						<input type="text" name="lastname" id="lastName" placeholder="First Name" />
+					</div>
+					<div className="form-group">
+						{/* <label htmlFor="name">Last Name:</label> */}
+						<input type="text" name="lastname" id="lastname" placeholder="Last Name" />
+					</div>
 				</div>
-				<div className="form-group">
-					<label htmlFor="email">Email:</label>
-					<input type="email" name="email" id="email"/>
+				<div className="email-phone multi-input">
+					<div className="form-group">
+						{/* <label htmlFor="email">Email:</label> */}
+						<input type="email" name="email" id="email" placeholder="Email" />
+					</div>
+					<div className="form-group">
+						{/* <label htmlFor="email">Phone:</label> */}
+						<input type="tel" name="phone" id="phone" placeholder="Phone" />
+					</div>
 				</div>
 			</section>
 		
-			
 			<section className="services-needed">
 				<h4 className="form-section-header">What Services Do You Need</h4>
 					<div className="service-group">
@@ -41,10 +46,9 @@ const ContactForm = (props) => {
 			</section>
 
 			<section className="project-description">
-				<h4 className="form-section-header">Tell Us A Little About the Project</h4>
 				<div className="form-group">
-					<label htmlFor="need">How can we help you?</label>
-					<input type="textarea" name="need" id="need"/>
+					{/* <label htmlFor="need">How can we help you?</label> */}
+					<input type="textarea" name="need" id="need" placeholder="How can we help you?" />
 				</div>
 			</section>
 		

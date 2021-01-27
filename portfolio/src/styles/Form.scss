@@ -1,32 +1,34 @@
 form {
-	width: 100%;
-	height: 0;
-	overflow: hidden;
+	width: 60%;
+	margin: 0 auto;
+
+	.form-header {
+		font-size: 30px;
+		font-weight: bold;
+		padding-bottom: 30px;
+	}
 
 	section {
-		padding: 15px 0 0;
-	}
-
-	.form-group {
-		input {
-			width: 90%;
-		}
-		input[type="textarea"] {
-			min-height: 150px;
-		}
-	}
-
-	.name {
-		display: flex;
-		justify-content: space-between;
+		padding: 0 0 20px !important;
 	}
 
 	.form-group {
 		width: 100%;
 
-		label {
-			display: block;
+		input {
+			width: 96%;
+			height: 50px;
+			border: none;
+			padding-left: 10px;
 		}
+		input[type="textarea"] {
+			padding: 20px 10px 120px;
+		}
+	}
+
+	.multi-input {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.service-group {
@@ -38,6 +40,13 @@ form {
 
 		input:first-of-type {
 			margin-right: 20px;
+		}
+	}
+
+	@media only screen and (max-width: 568px) {
+		.multi-input {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 }
