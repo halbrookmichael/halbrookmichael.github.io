@@ -1,15 +1,15 @@
 form {
-	width: 60%;
+	width: 100%;
 	margin: 0 auto;
+
+	section {
+		padding: 0 0 20px !important;
+	}
 
 	.form-header {
 		font-size: 30px;
 		font-weight: bold;
 		padding-bottom: 30px;
-	}
-
-	section {
-		padding: 0 0 20px !important;
 	}
 
 	.form-group {
@@ -43,10 +43,21 @@ form {
 		}
 	}
 
+	.submit-btn {
+		width: 100%;
+		text-align: end;
+		padding-right: 4%;
+	}
+
 	@media only screen and (max-width: 568px) {
 		.multi-input {
 			display: flex;
 			flex-direction: column;
+		}
+		.form-group {
+			input {
+				width: 100%;
+			}
 		}
 	}
 }

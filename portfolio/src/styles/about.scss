@@ -1,0 +1,123 @@
+@import '../variables/colors';
+
+#about {
+
+    section {
+        padding: 0;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 700px;
+        padding: 15% 0; 
+        background-size: cover;
+        background-position: center center;
+
+        .head-text {
+            text-align: center;
+            position: relative;
+
+            h2, p {
+                font-weight: bold;
+                color: $color-white;
+            }
+            h2 {
+				font-size: 80px;
+				font-weight: bold;
+			}
+			p {
+				font-size: 22px;
+				
+			}
+        }
+    }
+
+    .about-section {
+        display: flex;
+        width: 100%;
+
+        .overlay {
+            display: none;
+        }
+
+        .about-text, 
+        .about-img {
+            width: 50%;
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+
+            h4 {
+                font-size: 28px;
+                font-weight: bold;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .about-img {
+            img {
+                width: 100%;
+
+                &.focus {
+                    border-left: 5px solid $color-red_deep;
+                    border-bottom: 5px solid $color-red_deep;
+                }
+                &.money {
+                    border-right: 5px solid $color-red_deep;
+                    border-top: 5px solid $color-red_deep;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 868px) {
+            .overlay {
+                display: block;
+                z-index: 1;
+            }
+            .about-text, 
+            .about-img {
+                width: 100%;
+            }
+            .about-text {
+                padding: 0 20px;
+            }
+            .about-img {
+                position: absolute;
+                z-index: -1;
+
+                img {
+                    &.focus {
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                    &.money {
+                        border-right: none;
+                        border-top: none;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    @media only screen and (max-width: 868px) {
+		.about-section {
+            position: relative;
+            flex-direction: column;
+            margin: 30px 0;
+        }
+	}
+}

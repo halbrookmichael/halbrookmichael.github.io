@@ -1,5 +1,4 @@
 import React from 'react';
-// import Icon from '../components/Icon';
 
 import '../styles/service.scss';
 

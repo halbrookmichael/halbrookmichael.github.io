@@ -1,19 +1,16 @@
 import React from 'react';
-import PortfolioItemWeb from '../components/PortfolioItemWeb';
-import PortfolioItemDesign from '../components/PortfolioItemDesign';
+import { motion } from "framer-motion"
+import PortfolioItem from '../components/PortfolioItem';
 
 import '../styles/home.scss';
 import '../styles/portfolio.scss';
 
-const Portfolio = () => {
-	return (
-		<div id="portfolio" className="container">
-			<h2>WEB</h2>
-			<PortfolioItemWeb />
-			<h2>DESIGN</h2>
-			<PortfolioItemDesign />
 
-		</div>
+const Portfolio = (props) => {
+	return (
+		<motion.div exit={{opacity: 0}} id="portfolio" className="container">
+			<PortfolioItem />
+		</motion.div>
 	)
 }
 

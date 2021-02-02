@@ -12,11 +12,11 @@
 		},
 		{
 			"service": "Design",
-			"description": "From custom social media posts to layout design. We create clean and simple. Intuitive for the user and easy on the eyes.",
+			"description": "From custom social media posts to layout design. We create clean, simple and beuatiful designs. Intuitive for the user and easy on the eyes.",
 			"btnText": "Design Projects"
 		},
 		{
-			"service": "Social Media",
+			"service": "Social",
 			"description": "Your busy and you most likely don't have time to focus on multiple social accounts. Let us create fresh and engaging social media posts to all of your accounts, so you can do the work you NEED to do!",
 			"btnText": "Other Projects"
 		}

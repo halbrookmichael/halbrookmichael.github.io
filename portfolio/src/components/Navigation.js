@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavItem from './NavItem';
 
 import Hamburger from '../../node_modules/hamburger-react';
-import logo from '../img/altered_pixels_logo.svg'
+import logo from '../img/altered_pixels_logo.svg';
 
 import '../styles/nav.scss';
 
@@ -35,7 +35,6 @@ class Navigation extends Component {
     
     this.setState({ isOpen: false });
     this.forceUpdate();
-    console.log(this.props.toggled)
 
     link.forEach((item) => {
       item.classList.remove('active');
@@ -44,9 +43,7 @@ class Navigation extends Component {
     currentLink.classList.add('active');
   }
   handleMenu() {
-    console.log('called')
     this.setState({ isOpen: !this.state.isOpen });
-    console.log(this.state.isOpen)
   }
 
   render() {
@@ -65,7 +62,7 @@ class Navigation extends Component {
             <NavItem addedClasses="portfolio" item='Work' toLink='/portfolio' handleClick={this.handleLink} />
             <NavItem addedClasses="about" item='About' toLink='/about' handleClick={this.handleLink} />
             <NavItem addedClasses="testimonials" item='Happy Clients' toLink='/testimonials' handleClick={this.handleLink} />
-            {/* <NavItem addedClasses="contact" item='Contact' toLink='/contact' handleClick={this.handleLink} /> */}
+            <NavItem addedClasses="contact" item='Contact' toLink='/contact' handleClick={this.handleLink} />
           </ul>
         </nav>
       </div>

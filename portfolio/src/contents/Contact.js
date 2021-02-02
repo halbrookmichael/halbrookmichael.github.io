@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 import ContactForm from '../components/ContactForm';
 
@@ -7,9 +8,9 @@ import '../styles/contact.scss';
 const Contact = (props) => {
 	 
 	return (
-		<div id="contact" className="container">
+		<motion.div exti={{opacity: 0}} id="contact" className="container">
 			<ContactForm />
-		</div>
+		</motion.div>
 	)
 }
 

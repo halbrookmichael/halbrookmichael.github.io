@@ -4,12 +4,12 @@
 .service {
 	width: 33.3%;
 	position: relative;
-	
-	p {
-		color: $color-white;
-	}
 
 	.service-head {
+
+		.service-title {
+			color: $color-white;
+		}
 
 		.service-title {
 			font-size: 32px;
@@ -26,6 +26,10 @@
 	.service-body {
 		font-size: 20px;
 		line-height: 1.5;
+
+		p {
+			color: $color-white;
+		}
 	}
 
 	.view-more {

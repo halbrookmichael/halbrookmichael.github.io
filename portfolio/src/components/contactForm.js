@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../components/Button';
 
 import '../styles/form.scss';
 
@@ -32,16 +33,16 @@ const ContactForm = (props) => {
 			<section className="services-needed">
 				<h4 className="form-section-header">What Services Do You Need</h4>
 					<div className="service-group">
-						<input type="checkbox" name="design" value="yes"/>
-						<label htmlFor="frameworkYes">Web</label>
+						<input type="checkbox" name="web" value="web" id="web" />
+						<label htmlFor="web">Web</label>
 					</div>
 					<div className="service-group">
-						<input type="checkbox" name="design" value="yes"/>
-						<label htmlFor="frameworkYes">Design</label>
+						<input type="checkbox" name="design" value="design" id="design"/>
+						<label htmlFor="design">Design</label>
 					</div>
 					<div className="service-group">
-						<input type="checkbox" name="design" value="yes"/>
-						<label htmlFor="frameworkYes">Yes</label>
+						<input type="checkbox" name="social" value="social" id="social" />
+						<label htmlFor="social">Social Media</label>
 					</div>
 			</section>
 
@@ -51,8 +52,10 @@ const ContactForm = (props) => {
 					<input type="textarea" name="need" id="need" placeholder="How can we help you?" />
 				</div>
 			</section>
-		
-			<button type="submit">Talk Soon</button>
+
+			<div className="submit-btn">
+				<Button text="LET'S DO THIS" type="submit" />
+			</div>
 		</form>
 	)
 }

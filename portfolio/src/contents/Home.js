@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { motion } from 'framer-motion';
 
 import '../styles/home.scss';
 import data from '../data/data.json'; 
 import Service from '../components/Service';
 import ContactForm from '../components/ContactForm';
+
+import logo from '../img/altered_pixels_logo.svg';
 
 const services = data.services;
 
@@ -11,10 +14,11 @@ class Home extends Component {
 	
 	render() {
 		return (
-			<div id="home">
+			<motion.div exit={{opacity: 0}} id="home">
 				<section className="head" style={{backgroundImage: `url(${data.home.bg})`}}>
 					<div className="overlay"></div>
 						<div className="head-text container">
+							<img className="logo" src={logo} alt=""/>
 							<h1>{data.home.title}</h1>
 							<h4>{data.home.tagline}</h4>
 						</div>
@@ -26,10 +30,10 @@ class Home extends Component {
 						))}
 					</div>
 				</section>
-				<section>
+				<section className="contact">
 					<ContactForm />
 				</section>
-			</div>
+			</motion.div>
 		)
 	}
 }
