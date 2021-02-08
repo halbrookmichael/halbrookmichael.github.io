@@ -53,14 +53,19 @@
 		}
 	}
 	.contact {
+		display: flex;
+		align-items: flex-start;
 
-		.image {
-			width: 40%;
-			margin-right: 40px;
+		.ready-text {
+			padding-right: 40px;
 
-			img {
-				width: 100%;
-				overflow: hidden;
+			h2,
+			p {
+				font-weight: bold;
+			}
+
+			h2 {
+				font-size: 45px;
 			}
 		}
 	}
@@ -73,6 +78,21 @@
 	@media only screen and (max-width: 768px) {
 		.services {
 			flex-direction: column;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.contact {
+			flex-direction: column;
+
+			.ready-text {
+				width: 100%;
+				padding-right: 0px;
+				margin-bottom: 20px;
+
+				h2 {
+					font-size: 40px;
+				}
+			}
 		}
 	}
 }

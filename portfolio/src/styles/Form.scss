@@ -1,62 +1,17 @@
-form {
+.ContactForm {
 	width: 100%;
-	margin: 0 auto;
-
-	section {
-		padding: 0 0 20px !important;
-	}
-
-	.form-header {
-		font-size: 30px;
-		font-weight: bold;
-		padding-bottom: 30px;
-	}
-
-	.form-group {
+	
+	form {
 		width: 100%;
+		margin: 0 auto;
 
-		input {
-			width: 96%;
-			height: 50px;
-			border: none;
-			padding-left: 10px;
-		}
-		input[type="textarea"] {
-			padding: 20px 10px 120px;
-		}
-	}
-
-	.multi-input {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.service-group {
-
-		label {
-			padding-right: 10px;
-			margin-bottom: 0;
+		.row {
+			margin-bottom: 20px;
 		}
 
-		input:first-of-type {
-			margin-right: 20px;
-		}
-	}
-
-	.submit-btn {
-		width: 100%;
-		text-align: end;
-		padding-right: 4%;
-	}
-
-	@media only screen and (max-width: 568px) {
-		.multi-input {
-			display: flex;
-			flex-direction: column;
-		}
-		.form-group {
-			input {
-				width: 100%;
+		@media only screen and (max-width: 767px) {
+			input.name {
+				margin-bottom: 20px;
 			}
 		}
 	}

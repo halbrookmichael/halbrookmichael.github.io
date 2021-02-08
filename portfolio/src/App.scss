@@ -36,7 +36,7 @@
   }
 }
 
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 767px) {
 	.App {
     padding-bottom: 112px;
   }
@@ -47,7 +47,7 @@ ul {
 }
 .nav-link {
   position: relative;
-  color: #000;
+  color: $color-purple_grey;
   font-weight: bold;
   list-style: none;
   transition: all 0.3s ease;

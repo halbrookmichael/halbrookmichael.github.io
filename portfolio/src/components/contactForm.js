@@ -1,63 +1,251 @@
-import React from 'react';
-import Button from '../components/Button';
+import React, { Component } from 'react';
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
+import Button from '../components/Button';
 import '../styles/form.scss';
 
-const ContactForm = (props) => {
-	return (
-		<form className="container" action="">
-			<h4 className="form-header">Ready to start?</h4>
-			<section className="client-info">
-				<div className="name multi-input">
-					<div className="form-group">
-						{/* <label htmlFor="name">First Name:</label> */}
-						<input type="text" name="lastname" id="lastName" placeholder="First Name" />
-					</div>
-					<div className="form-group">
-						{/* <label htmlFor="name">Last Name:</label> */}
-						<input type="text" name="lastname" id="lastname" placeholder="Last Name" />
-					</div>
-				</div>
-				<div className="email-phone multi-input">
-					<div className="form-group">
-						{/* <label htmlFor="email">Email:</label> */}
-						<input type="email" name="email" id="email" placeholder="Email" />
-					</div>
-					<div className="form-group">
-						{/* <label htmlFor="email">Phone:</label> */}
-						<input type="tel" name="phone" id="phone" placeholder="Phone" />
-					</div>
-				</div>
-			</section>
+// Email validation
+const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+
+// Form validation
+const formValid = ({ formErrors, ...rest }) => {
+  let valid = true;
+
+  // Validate form errors being empty
+  Object.values(formErrors).forEach((val) => {
+    val.length > 0 && (valid = false);
+  });
+
+  // Validate the form was filled out
+  Object.values(rest).forEach((val) => {
+    val === '' && (valid = false);
+  });
+
+  return valid;
+};
+
+class ContactForm extends Component {
+  constructor(props) {
+		super(props);
 		
-			<section className="services-needed">
-				<h4 className="form-section-header">What Services Do You Need</h4>
-					<div className="service-group">
-						<input type="checkbox" name="web" value="web" id="web" />
-						<label htmlFor="web">Web</label>
-					</div>
-					<div className="service-group">
-						<input type="checkbox" name="design" value="design" id="design"/>
-						<label htmlFor="design">Design</label>
-					</div>
-					<div className="service-group">
-						<input type="checkbox" name="social" value="social" id="social" />
-						<label htmlFor="social">Social Media</label>
-					</div>
-			</section>
+    this.state = {
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+      formErrors: {
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+      },
+    };
+  }
 
-			<section className="project-description">
-				<div className="form-group">
-					{/* <label htmlFor="need">How can we help you?</label> */}
-					<input type="textarea" name="need" id="need" placeholder="How can we help you?" />
-				</div>
-			</section>
+  toastifySuccess() {
+    toast.success('We have recieved your request and will get back to you soon!', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      className: 'submit-feedback success',
+    });
+  }
 
-			<div className="submit-btn">
-				<Button text="LET'S DO THIS" type="submit" />
-			</div>
-		</form>
-	)
+  toastifyFail() {
+    toast.error('Form failed to send!', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      className: 'submit-feedback fail',
+    });
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (formValid(this.state)) {
+      // Handle form validation success
+      const { name, email, phone, subject, message } = this.state;
+
+      // Set template params
+      let templateParams = {
+        name: name,
+        email: email,
+        phone: phone,
+        subject: subject,
+        message: message,
+      };
+
+      emailjs.send('service_r06upgp', 'template_bwvxpbn', templateParams, 'user_pRfnIeHwHP6WB1M8OaAhu');
+
+      console.log(`
+        --SUBMITTING--
+        Name: ${name}
+        Email: ${email}
+        Subject: ${subject}
+        Message: ${message}
+      `);
+      
+      this.toastifySuccess();
+      this.resetForm();
+    } else {
+      // Handle form validation failure
+      console.error('FORM INVALID - DISPLAY ERROR MESSAGE');
+      this.toastifyFail();
+    }
+  };
+
+  // Function to reset form
+  resetForm() {
+    this.setState({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+    });
+  }
+
+  handleChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    let formErrors = { ...this.state.formErrors };
+
+    switch (name) {
+      case 'name':
+        formErrors.name = value.length < 1 ? 'Please enter your name.' : '';
+        break;
+      case 'email':
+        formErrors.email = emailRegex.test(value) ? '' : 'Please enter a valid email address.';
+        break;
+      case 'phone':
+        formErrors.phone = value.length < 1 ? 'Please enter a valid phone number.' : '';
+        break;
+      case 'subject':
+        formErrors.subject = value.length < 1 ? 'Please enter a subject.' : '';
+        break;
+      case 'message':
+        formErrors.message = value.length < 1 ? 'Please enter a message' : '';
+        break;
+      default:
+        break;
+    }
+    this.setState({ formErrors, [name]: value });
+  };
+
+  render() {
+    const { formErrors } = this.state;
+
+    return (
+      <div className='ContactForm'>
+        <form id='contact-form' onSubmit={this.handleSubmit} noValidate>
+          <div className='row'>
+            <div className='col-md-6 col-sm-12'>
+              <input
+                type='text'
+                name='name'
+                value={this.state.name}
+                className={`form-control formInput name ${formErrors.name.length > 0 ? 'error' : null}`}
+                onChange={this.handleChange}
+                placeholder='Name'
+                noValidate
+              ></input>
+              {formErrors.name.length > 0 && (
+                <span className='errorMessage'>{formErrors.name}</span>
+              )}
+            </div>
+
+            <div className='col-md-6 col-sm-12'>
+              <input
+                type='email'
+                name='email'
+                value={this.state.email}
+                className={`form-control formInput ${formErrors.email.length > 0 ? 'error' : null}`}
+                onChange={this.handleChange}
+                placeholder='Email'
+                noValidate
+              ></input>
+              {formErrors.email.length > 0 && (
+                <span className='errorMessage'>{formErrors.email}</span>
+              )}
+            </div>
+          </div>
+
+          <div className='row'>
+						<div className='col-md-6 col-sm-12'>
+              <input
+                type='tel'
+                name='phone'
+                value={this.state.phone}
+                className={`form-control formInput ${
+                  formErrors.phone.length > 0 ? 'error' : null
+                }`}
+                onChange={this.handleChange}
+                placeholder='Phone'
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                maxLength="10"
+                noValidate
+              ></input>
+              {formErrors.subject.length > 0 && (
+                <span className='errorMessage'>{formErrors.phone}</span>
+              )}
+            </div>
+            <div className='col-md-6 col-sm-12'>
+              <input
+                type='subject'
+                name='subject'
+                value={this.state.subject}
+                className={`form-control formInput ${
+                  formErrors.subject.length > 0 ? 'error' : null
+                }`}
+                onChange={this.handleChange}
+                placeholder='Subject'
+                noValidate
+              ></input>
+              {formErrors.subject.length > 0 && (
+                <span className='errorMessage'>{formErrors.subject}</span>
+              )}
+            </div>
+          </div>
+
+					<div className="row">
+						<div className='col-12'>
+              <textarea
+                rows='5'
+                name='message'
+                value={this.state.message}
+                className={`form-control formInput ${
+                  formErrors.message.length > 0 ? 'error' : null
+                }`}
+                onChange={this.handleChange}
+                placeholder='Message'
+                noValidate
+              ></textarea>
+              {formErrors.message.length > 0 && (
+                <span className='errorMessage'>{formErrors.message}</span>
+              )}
+            </div>
+					</div>
+
+					<div className="submit-btn-container">
+						<Button className='btn btn-primary submit-btn' text="Let's Do This" type='submit' />
+					</div>	
+         
+        </form>
+        <ToastContainer />
+      </div>
+    );
+  }
 }
 
-export default ContactForm
+export default ContactForm;

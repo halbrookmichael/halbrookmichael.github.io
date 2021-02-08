@@ -8,7 +8,7 @@ import '../styles/contact.scss';
 const Contact = (props) => {
 	 
 	return (
-		<motion.div exti={{opacity: 0}} id="contact" className="container">
+		<motion.div exit={{opacity: 0}} id="contact" className="container">
 			<ContactForm />
 		</motion.div>
 	)
