@@ -11,21 +11,26 @@
 
 		.back {
 			position: absolute;
-			top: 20px;
-			left: 0;
+			top: 15px;
+			left: 15px;
 			padding: 0;
 		}
 	}
 
-	.nav-link {
+	.port-title-container {
+		margin-top: 30px;
 
-		&.port-title {
-			display: inline;
-			text-transform: uppercase;
-			font-weight: bold;
-			font-size: 40px;
+		.nav-link {
+
+			&.port-title {
+				display: inline;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 40px;
+			}
 		}
 	}
+	
 	
 
 	.port-info {
@@ -74,15 +79,22 @@
 				font-size: 30px;
 				font-style: italic;
 				font-weight: lighter;
+				margin-bottom: 5px;
 			}
 		}
 	}
 
 	@media only screen and (max-width: 968px) {
 		.port-info {
+			margin: 30px 0;
+
 			.ask,
 			.tech {
 				width: 100%;
+			}
+
+			.ask {
+				padding: 0;
 			}
 
 			.desktop, 

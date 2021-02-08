@@ -35,8 +35,8 @@ class PortfolioDetail extends Component {
 	render() {
 		return (
 			<motion.div exit={{opacity: 0}} id="portfolio-detail" className="container">
-				<NavItem addedClasses="back" item='Back' toLink='/portfolio' />
-				<div className="port-title">
+				<NavItem addedClasses="back" item='&#x021A4;Back' toLink='/portfolio' />
+				<div className="port-title-container">
 					<a className="nav-link port-title" href={this.state.link}>{this.state.title}</a>
 				</div>
 				<div className="port-info">
@@ -46,9 +46,9 @@ class PortfolioDetail extends Component {
 						</div>
 						<div className="ask">
 							<h3>What We Did</h3>
-							<p>{this.state.askPOne}</p>
+							<p className="container">{this.state.askPOne}</p>
 							{
-								this.state.askPTwo ? <p>{this.state.askPTwo}</p> : ''
+								this.state.askPTwo ? <p className="container">{this.state.askPTwo}</p> : ''
 							}
 						</div>
 					</div>

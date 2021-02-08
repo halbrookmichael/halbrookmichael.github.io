@@ -15,7 +15,6 @@
 			font-size: 32px;
 			text-transform: uppercase;
 			font-weight: bold;
-			line-height: 32px;
 		}
 
 		svg {
@@ -55,6 +54,15 @@
 	.service {
 		padding: 0 0 30px;
 		width: 100%;
+
+		p.service-title {
+			font-size: 26px !important;
+			line-height: 20px;
+		}
+
+		&:last-of-type {
+			padding: 0 15px;
+		}
 	}
 	.service-body {
 		width: 100%;

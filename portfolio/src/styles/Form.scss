@@ -10,8 +10,15 @@
 		}
 
 		@media only screen and (max-width: 767px) {
-			input.name {
+			input.name,
+			input.phone {
 				margin-bottom: 20px;
+			}
+
+			.submit-btn-container {
+				button {
+					width: 100%;
+				}
 			}
 		}
 	}

@@ -15,8 +15,7 @@ const Testimonial = (props) => {
 						<div className="testimonial-detail">
 							<div className="testimonial-name">
 								<h3>{item.author}</h3>
-								<p className="position">{item.position}</p>
-								<p>{item.company}</p>
+								<p className="position">{item.position} &#x0007C;&#x0007C; <span>{item.company}</span></p>
 							</div>
 							<div className="testimonial-text">
 								<p>{item.testimonialPOne}</p>

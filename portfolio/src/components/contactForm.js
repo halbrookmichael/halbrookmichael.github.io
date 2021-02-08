@@ -147,7 +147,7 @@ class ContactForm extends Component {
     const { formErrors } = this.state;
 
     return (
-      <div className='ContactForm'>
+      <div className='ContactForm container'>
         <form id='contact-form' onSubmit={this.handleSubmit} noValidate>
           <div className='row'>
             <div className='col-md-6 col-sm-12'>
@@ -187,7 +187,7 @@ class ContactForm extends Component {
                 type='tel'
                 name='phone'
                 value={this.state.phone}
-                className={`form-control formInput ${
+                className={`form-control formInput phone ${
                   formErrors.phone.length > 0 ? 'error' : null
                 }`}
                 onChange={this.handleChange}

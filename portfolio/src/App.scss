@@ -34,27 +34,54 @@
   p {
     color: $color-purple_grey;
   }
+
+  ul {
+    list-style: none;
+  }
+  .nav-link {
+    position: relative;
+    color: $color-purple_grey;
+    font-weight: bold;
+    list-style: none;
+    transition: all 0.3s ease;
+    
+    &.active, &:hover {
+      color: $color-red_deep;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  }
 }
+
+
 
 @media only screen and (max-width: 767px) {
 	.App {
     padding-bottom: 112px;
-  }
-}
 
-ul {
-  list-style: none;
-}
-.nav-link {
-  position: relative;
-  color: $color-purple_grey;
-  font-weight: bold;
-  list-style: none;
-  transition: all 0.3s ease;
-  
-  &.active, &:hover {
-    color: $color-red_deep;
-    cursor: pointer;
-    transition: all 0.3s ease;
+     section.head,
+    #about section.head {
+
+			.head-text {
+
+				.logo {
+					width: 100px;
+				}
+
+				h1 {
+					font-size: 60px !important;
+				}
+        h2 {
+					font-size: 60px !important;
+				}
+				h4 {
+					font-size: 20px !important;
+				}
+			}
+		}
+
+    p {
+      font-size: 16px !important;
+    }
   }
 }

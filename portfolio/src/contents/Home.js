@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { motion } from 'framer-motion';
 
-import '../styles/home.scss';
-import data from '../data/data.json'; 
 import Service from '../components/Service';
 import ContactForm from '../components/ContactForm';
-
+import '../styles/home.scss';
 import logo from '../img/altered_pixels_logo.svg';
+import data from '../data/data.json'; 
 
 const services = data.services;
 
@@ -31,7 +30,7 @@ class Home extends Component {
 					</div>
 				</section>
 				<section className="contact container">
-					<div className="ready-text">
+					<div className="ready-text container">
 						<h2>READY TO GET STARTED CREATING YOUR WEB PRESENCE?</h2>
 						<p>Fill out the form and let us know a little about the task at hand and we will get back to you as soon as possible!</p>
 					</div>

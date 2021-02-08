@@ -10,9 +10,6 @@ const Service = (props) => {
 			</div>
 			<div className="service-body">
 				<p>{props.serviceDesc}</p>
-				<div className="view-more">
-					{/* <Button classes="btn-primary">{props.btnText}</Button> */}
-				</div>
 			</div>
 			
 		</div>
