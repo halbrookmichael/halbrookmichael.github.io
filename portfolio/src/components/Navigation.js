@@ -1,25 +1,14 @@
-import React, { Component } from 'react';
+import { useState, useEffect } from 'react';
 import NavItem from './NavItem';
+import HamburgerMenu from 'react-hamburger-menu'
 
-import Hamburger from '../../node_modules/hamburger-react';
 import logo from '../img/altered_pixels_logo.svg';
-
 import '../styles/nav.scss';
 
-class Navigation extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isOpen: false
-    }
-
-    this.handleLink = this.handleLink.bind(this);
-    this.handleMenu = this.handleMenu.bind(this);
-    // this.toggleMobile = this.toggleMobile.bind(this);
-  }
+const Navigation = (props) =>  {
+  const [isOpen, setIsOpen] = useState(false)
   
-  componentDidMount() {
+  useEffect(() => {
     let href = window.location.href.split('/');
 
     if(href[3] === '')
@@ -28,46 +17,57 @@ class Navigation extends Component {
       document.querySelector('.portfolio').classList.add('active');
     else
       document.querySelector(`.${href[3]}`).classList.add('active');
-  }
-  handleLink(e) {
+  }, [])
+
+  const handleLink = (e) => {
     let link = document.querySelectorAll('li a');
     let currentLink = e.target;
-    
-    this.setState({ isOpen: false });
-    this.forceUpdate();
 
     link.forEach((item) => {
       item.classList.remove('active');
     })
 
     currentLink.classList.add('active');
-  }
-  handleMenu() {
-    this.setState({ isOpen: !this.state.isOpen });
-  }
 
-  render() {
-
-    return (
-      <div className="main-nav ">
-        <nav className="nav-inner container">
-          <div className="mobile" onClick={this.handleMenu}>
-            <Hamburger label="show menu" />
-          </div>
-          <a href="/" className="logo ">
+    if(window.innerWidth <= 767) {
+      handleMenu()
+    }
+  }
+  const handleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+  
+  return (
+    <div className="main-nav ">
+      <nav className="nav-inner container-fluid">
+        <a href="/" className="logo ">
+          <img src={logo} alt=""/>
+        </a>
+        <HamburgerMenu
+          className='hamburger'
+          isOpen={isOpen}
+          menuClicked={handleMenu}
+          width={30}
+          height={18}
+          strokeWidth={3}
+          rotate={0}
+          color='#444'
+          borderRadius={0}
+          animationDuration={0.5}
+        />
+        <ul className={`links ${isOpen ? 'open' : ''}`}>
+          <NavItem addedClasses="home" item='Home' toLink='/' handleClick={handleLink} />
+          <NavItem addedClasses="portfolio" item='Work' toLink='/portfolio' handleClick={handleLink} />
+          <NavItem addedClasses="testimonials" item='Happy Clients' toLink='/testimonials' handleClick={handleLink} />
+          <NavItem addedClasses="about" item='About' toLink='/about' handleClick={handleLink} />
+          {/* <NavItem addedClasses="contact" item='Contact' toLink='/contact' handleClick={handleLink} /> */}
+          <div className="logo-links">
             <img src={logo} alt=""/>
-          </a>
-          <ul className={`links ${this.state.isOpen ? 'open' : ''}`}>
-            <NavItem addedClasses="home" item='Home' toLink='/' handleClick={this.handleLink} />
-            <NavItem addedClasses="portfolio" item='Work' toLink='/portfolio' handleClick={this.handleLink} />
-            <NavItem addedClasses="about" item='About' toLink='/about' handleClick={this.handleLink} />
-            <NavItem addedClasses="testimonials" item='Happy Clients' toLink='/testimonials' handleClick={this.handleLink} />
-            <NavItem addedClasses="contact" item='Contact' toLink='/contact' handleClick={this.handleLink} />
-          </ul>
-        </nav>
-      </div>
-    );
-  }
+          </div>
+        </ul>
+      </nav>
+    </div>
+  )
 }
 
 export default Navigation;

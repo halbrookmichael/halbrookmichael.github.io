@@ -1,19 +1,33 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const NavItem = (props) => {
+const NavItem = ({ toLink, data, handleClick, item, addedClasses }) => {
   return (
     <li>
-      <Link className={`nav-link ${props.addedClasses}`} 
+      <Link className={`nav-link ${addedClasses}`} 
             to={{
-              pathname: props.toLink,
-              data: props.data
+              pathname: toLink,
+              data: data
             }} 
-            onClick={props.handleClick}>
-        {props.item}
+            onClick={handleClick}>
+        {item}
       </Link> 
     </li>
   );
+}
+
+NavItem.defaultProps = {
+  addedClasses: '',
+  toLink: '',
+  data: [],
+  item: ''
+}
+
+NavItem.propTypes = {
+  addedClasses: PropTypes.string,
+  toLink: PropTypes.string,
+  data: PropTypes.array,
+  item: PropTypes.string
 }
 
 export default NavItem;

@@ -8,17 +8,13 @@
 	.service-head {
 
 		.service-title {
-			color: $color-white;
+			color: $color-purple;
 		}
 
 		.service-title {
 			font-size: 32px;
 			text-transform: uppercase;
 			font-weight: bold;
-		}
-
-		svg {
-			color: $color-red_deep;
 		}
 	}
 
@@ -27,7 +23,7 @@
 		line-height: 1.5;
 
 		p {
-			color: $color-white;
+			color: $color-black;
 		}
 	}
 

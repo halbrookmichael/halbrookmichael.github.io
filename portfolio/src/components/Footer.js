@@ -1,8 +1,8 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 import '../styles/footer.scss'
 
- const Footer = (props) => {
+const Footer = (props) => {
 	return (
 		<section id="footer">
 			<div className="footer-content container">

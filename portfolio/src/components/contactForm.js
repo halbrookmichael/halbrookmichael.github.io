@@ -27,6 +27,7 @@ const formValid = ({ formErrors, ...rest }) => {
 };
 
 class ContactForm extends Component {
+  
   constructor(props) {
 		super(props);
 		
@@ -164,7 +165,6 @@ class ContactForm extends Component {
                 <span className='errorMessage'>{formErrors.name}</span>
               )}
             </div>
-
             <div className='col-md-6 col-sm-12'>
               <input
                 type='email'
@@ -180,7 +180,6 @@ class ContactForm extends Component {
               )}
             </div>
           </div>
-
           <div className='row'>
 						<div className='col-md-6 col-sm-12'>
               <input
@@ -217,7 +216,6 @@ class ContactForm extends Component {
               )}
             </div>
           </div>
-
 					<div className="row">
 						<div className='col-12'>
               <textarea
@@ -236,11 +234,9 @@ class ContactForm extends Component {
               )}
             </div>
 					</div>
-
 					<div className="submit-btn-container">
 						<Button className='btn btn-primary submit-btn' text="Let's Do This" type='submit' />
 					</div>	
-         
         </form>
         <ToastContainer />
       </div>

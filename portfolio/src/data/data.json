@@ -87,19 +87,8 @@
 	"about": {
 		"header": {
 			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/pexels-jens-johnsson-66100-min.jpg",
-			"mainText": "We Are Your Guide",
+			"mainText": "Let Us Be Your Guide",
 			"tagline": "When we first decided to do this, we established that we were dedicated to helping small business owners realize their dreams and becoming web relevent without having to mortgage their home to do so. We understand that it's a difficult road, so let us help you navigate it!"
-		},
-		"sectionOne": {
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/pexels-maurício-mascaro-712786-min.jpg",
-			"mainText": "Focus On What Matters",
-			"tagline": "We take the pressure of the web and design off of the small business owner so they can focus on what's most important, THEIR BUSINESS! From Wix websites to full blown custom solutions we are the web are the web crazies you are looking for!"
-		},
-		"sectionTwo": {
-			"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/pexels-pixabay-259165-min.jpg",
-			"mainText": "It's NOT All About the Money",
-			"tagline": "We understand that opening a new business is expensive and the risks are numerous. That's why we don't want you to pay astronomical fees to create a strong web presence. While we do have to get paid, we want you to as well!"
 		}
-
 	}
 }	

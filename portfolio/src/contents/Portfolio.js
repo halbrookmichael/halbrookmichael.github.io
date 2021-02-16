@@ -1,15 +1,15 @@
-import React from 'react';
 import { motion } from "framer-motion"
-import PortfolioItem from '../components/PortfolioItem';
+import PortfolioItem from '../components/PortfolioItem'
 
-import '../styles/home.scss';
-import '../styles/portfolio.scss';
+import '../styles/portfolio.scss'
 
+import data from '../data/data.json'
 
-const Portfolio = (props) => {
+const Portfolio = () => {
+
 	return (
 		<motion.div exit={{opacity: 0}} id="portfolio" className="container">
-			<PortfolioItem />
+			<PortfolioItem portItems={data.portfolio}/>
 		</motion.div>
 	)
 }

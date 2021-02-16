@@ -1,141 +1,174 @@
 @import '../variables/colors';
 
 #about {
+    display: flex;
+
+    li,
+    p {
+        font-size: 18px;
+    }
 
     section {
         padding: 0;
     }
 
-    .head {
+    .about-section-left {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        padding: 60px;
+
+        .about-text-left {
+            max-width: 990px;
+
+            .about-section {
+                margin-bottom: 60px;
+
+                .company-logos {
+                    display: flex;
+
+                    .logo {
+                        margin-left: -10px;
+                        padding: 0 10px;
+                        width: 125px;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        img {
+                            width: 100%;
+                            border-radius: 5%;
+                            filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .25));
+                        }
+                    }
+                }
+
+                h4 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                }
+
+                .list {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+                    ul {
+                        padding-left: 0;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .about-section-right {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
-        width: 100%;
+        position: fixed;
+        width: 50%;
         height: 100%;
-        max-height: 700px;
-        padding: 15% 0; 
+        right: 0;
         background-size: cover;
         background-position: center center;
 
-        .head-text {
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .about-text-right {
+            padding: 0 125px;
             text-align: center;
             position: relative;
 
-            h2, p {
-                font-weight: bold;
-                color: $color-white;
-            }
             h2 {
-				font-size: 80px;
-			}
-			p {
-				font-size: 22px;
-				text-align: left;
-			}
-        }
-    }
-
-    .about-section {
-        display: flex;
-        width: 100%;
-
-        .overlay {
-            display: none;
-        }
-
-        .about-text, 
-        .about-img {
-            width: 50%;
-        }
-
-        .about-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: left;
-            padding: 0 5%;
-
-            h4 {
-                font-size: 28px;
+				font-size: 120px;
+                line-height: 2;
                 font-weight: bold;
-            }
-            p {
-                font-size: 20px;
-            }
+                margin-top: -120px;
+                color: $color-white;
+			}
         }
+    }
+}
 
-        .about-img {
-            img {
-                width: 100%;
+@media only screen and (max-width: 1130px) {
+	#about {
+       
+        .about-section-right {
 
-                &.focus {
-                    border-left: .5px solid $color-red_deep;
-                    border-bottom: .5px solid $color-red_deep;
-                }
-                &.money {
-                    border-right: .5px solid $color-red_deep;
-                    border-top: .5px solid $color-red_deep;
-                }
-            }
-        }
-
-        @media only screen and (max-width: 868px) {
-            .overlay {
-                display: block;
-                z-index: 1;
-            }
-            .about-text, 
-            .about-img {
-                width: 100%;
-            }
-            .about-text {
-                padding: 0 20px;
-            }
-            .about-img {
-                position: absolute;
-                z-index: -1;
-
-                img {
-                    &.focus {
-                        border-left: none;
-                        border-bottom: none;
-                    }
-                    &.money {
-                        border-right: none;
-                        border-top: none;
-                    }
-                }
-                
+            .about-text-right {
+                padding: 0 95px;
             }
         }
     }
+}
 
-    @media only screen and (max-width: 868px) {
-		.about-section {
-            position: relative;
-            flex-direction: column;
-            margin: 30px 0;
+@media only screen and (max-width: 986px) {
+	#about {
+        flex-direction: column;
+        padding-bottom: 20px;
+        max-width: 720px;
+        margin: 0 auto;
+
+        .about-section-left,
+        .about-section-right {
+            width: 100%;
         }
-	}
-    @media only screen and (max-width: 767px) {
-		section.head {
+        .about-section-left {
+            padding: 20px;
 
-			.head-text {
+            .about-text-left {
+            
+                .about-section {
+                    margin-bottom: 30px;
 
-				.logo {
-					width: 100px;
-				}
+                    h4 {
+                        margin-bottom: 10px;
+                    }
+                    .company-logos {
+                        .logo {
+                            width: 110px;
+                        }
+                    }
+                }
+            }
+        }
+        .about-section-right {
+            position: relative;
+            order: -1;
+            background-image: none !important;
 
-				h1 {
-					font-size: 60px;
-					font-weight: bold;
-				}
-				h4 {
-					font-size: 20px;
-				}
-			}
-		}
-	}
+            .overlay {
+                display: none;
+            }
+
+            .about-text-right {
+                padding: 40px 20px 0;
+                position: relative;
+
+                h2 {
+                    font-size: 60px;
+                    color: $color-purple;
+                    line-height: 1;
+                    padding-bottom: 20px;
+                    border-bottom: .5px solid $color-purple;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+	
+}
+@media only screen and (max-width: 767px) {
+	#about {
+        max-width: 540px;
+    }
 }

@@ -1,17 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import '../styles/home.scss'
 
-import '../styles/home.scss';
+const PortfolioItem = ({ portItems }) => {
+	const [portArray, setPortArray] = useState([])
 
-import data from '../data/data.json'; 
+	if(portArray.length === 0 )
+		setPortArray(portItems.web)
 
-let portfolioweb = data.portfolio.web;
-let portfoliodesign = data.portfolio.design;
-
-const PortfolioItem = (props) => {
 	return (
 		<div className="portfolio-items">
-			{portfolioweb.map((item, index) => (
+			{portArray.map((item, index) => (
 				<Link 
 					key={index} 
 					to={{
