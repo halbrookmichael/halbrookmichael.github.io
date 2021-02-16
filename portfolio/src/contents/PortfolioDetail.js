@@ -18,7 +18,8 @@ class PortfolioDetail extends Component {
 			link: data ? data.link : localStorage.getItem('link'),
 			askPOne: data ? data.askPOne : localStorage.getItem('askOne'),
 			askPTwo: data ? data.askPTwo : localStorage.getItem('askTwo'),
-			technologies: data ? data.technologies : localStorage.getItem('technologies')
+			technologies: data ? data.technologies : localStorage.getItem('technologies'),
+			type: data ? data.type : localStorage.getItem('type')
 		}
 
 		if(data) {
@@ -29,6 +30,7 @@ class PortfolioDetail extends Component {
 			localStorage.setItem('askOne', data.askPOne);
 			localStorage.setItem('askTwo', data.askPTwo);
 			localStorage.setItem('technologies', data.technologies);
+			localStorage.setItem('type', data.type);
 		}
 	}
 	
@@ -41,51 +43,54 @@ class PortfolioDetail extends Component {
 				</div>
 				<div className="port-info">
 					<div className="desktop">
-						<div className="desktop-image">
+						<div className={`desktop-image ${this.state.type === 'design' ? 'design' : ''}`}>
 							<img src={this.state.image} alt="B-Side desktop"/>
 						</div>
-						<div className="ask">
-							<h3>What We Did</h3>
-							<p className="container">{this.state.askPOne}</p>
-							{
-								this.state.askPTwo ? <p className="container">{this.state.askPTwo}</p> : ''
-							}
-						</div>
+						{this.state.type === 'web' &&
+							<div className="ask">
+								<h3>What We Did</h3>
+								<p className="container">{this.state.askPOne}</p>
+								{
+									this.state.askPTwo ? <p className="container">{this.state.askPTwo}</p> : ''
+								}
+							</div>
+						}
 					</div>
-					<div className="mobile">
-						<div className="tech">
-							<h3>What We Used</h3>
-							{
-								Array.isArray(this.state.technologies)
-								?
-								<ul className="technologies">
-									{
-										this.state.technologies.map((item, index) => (
-											<li key={index}>{item}</li>
-										)) 
-									}
-								</ul>
-								: 
-								<div className="technologies">
-									{
-										this.state.technologies.split(',').map((item, index) => (
-											<p key={index}>{item}</p>
-										))
-									}
-								</div>	 
-							}
+					{this.state.type === 'web' &&
+						<div className="mobile">
+							<div className={`tech ${!this.state.imageMobile ? 'full-width' : ''}`}>
+								<h3>What We Used</h3>
+								{
+									Array.isArray(this.state.technologies)
+									?
+									<ul className="technologies">
+										{
+											this.state.technologies.map((item, index) => (
+												<li key={index}>{item}</li>
+											)) 
+										}
+									</ul>
+									: 
+									<div className="technologies">
+										{
+											this.state.technologies.split(',').map((item, index) => (
+												<p key={index}>{item}</p>
+											))
+										}
+									</div>	 
+								}
+							</div>
+								{
+									this.state.imageMobile 
+									?
+									<div className="mobile-image">
+										<img src={this.state.imageMobile} alt=""/> 
+									</div>
+									:
+									''
+								}
 						</div>
-							{
-								this.state.imageMobile 
-								?
-								<div className="mobile-image">
-									<img src={this.state.imageMobile} alt=""/> 
-								</div>
-								:
-								''
-							}
-						
-					</div>
+					}
 				</div>
 			</motion.div>
 		);	

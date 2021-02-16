@@ -49,6 +49,10 @@
 		.ask,
 		.tech {
 			width: 50%;
+
+			&.full-width {
+				width: 100%;
+			}
 		}
 
 		.desktop, 
@@ -59,6 +63,10 @@
 			.desktop-image,
 			.mobile-image {
 				width: 50%;
+
+				&.design {
+					width: 100%;
+				}
 			}
 		}
 

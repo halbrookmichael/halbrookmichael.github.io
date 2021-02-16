@@ -22,45 +22,40 @@
 		}
 	],
 	"portfolio": {
-		"web": [
+		"items": [
 			{
-				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside.png",
-				"imgMobile": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside_mobile.png",
+				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside-min.png",
+				"imgMobile": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside_mobile-min.png",
 				"title": "B-Side Games",
 				"askPOne": "B-Side was in need of a full site redesign and social media posts consitency. Utilizing the tools provided by Wix, which are very limiting, we were able to create a clean, modern and fun design for the game store. We also created custom database entries in Wix to update new card game releases automatically, using jQuery, along with adding custom widgets for Discord and TCGPlayer. As for social media, we created a clean aesthetic that gets straight to the point and delivers the information needed to the user. We are also creating a Twitter and YouTube account for the store, so that we can post box openings of product and reviews to furhter engage customers.",
 				"askPTwo": "There are plans to move B-Side of off Wix and to a much more robust ecommerce solution so that they can begin shipping to other states and reaching a larger audience.",
 				"link": "https://www.bsideboardgamesandpuzzles.com/",
-				"technologies": ["Wix", " jQuery", "HTML"],
+				"technologies": ["Wix", " jQuery", "HTML", "CSS"],
 				"btnText": "View Detail",
 				"type": "web"
 			},
 			{
-				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf.png",
+				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf-min.png",
 				"title": "WHWF Spokane",
 				"askPOne": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eum blanditiis dolores ullam tenetur qui eveniet? Cumque sequi, quibusdam quisquam cum aperiam placeat nostrum saepe, aliquam fugit nam architecto nemo. Ratione eveniet corrupti deserunt unde voluptas voluptates omnis autem consectetur? Enim molestias dicta dolores, expedita est eaque ducimus distinctio eius laboriosam et fugiat molestiae laudantium repellat odio! Accusantium, exercitationem fugit. Magni praesentium laborum suscipit eaque eligendi voluptatibus repellendus quisquam cumque neque a in qui reiciendis ipsam provident at quod veniam beatae ratione aperiam, asperiores voluptas quibusdam illum debitis? Ratione, molestias. Suscipit, ab deleniti dolore debitis quod eius, eum nemo error voluptatem pariatur ad consectetur quam officiis tempore doloribus commodi expedita illum quas optio assumenda fugit quisquam. Quos, et. Provident, hic?",
 				"link": "https://www.whwfspokane.org/",
-				"technologies": ["Wix", "jQuery", "HTML"],
+				"technologies": ["Wix", "jQuery", "HTML", "CSS", "Google captcha", "Domain registration"],
 				"btnText": "View Detail",
 				"type": "web"
-			}
-		],
-		"design": [
+			},
 			{
-				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/magic_sneak_peak-min.png",
-				"title": "FB Magic! Post",
-				"ask": "",
-				"link": "https://www.bsideboardgamesandpuzzles.com/",
-				"technologies": ["Wix", " jQuery", "HTML"],
-				"btnText": "View Detail",
+				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/kaldheim_facebook_mockup-min.png",
+				"title": "FB Magic Post",
 				"type": "design"
 			},
 			{
-				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/win_a_box_tournament-min.png",
-				"title": "FB Yu-Gi-Oh! Post",
-				"ask": "",
-				"link": "https://www.whwfspokane.org/",
-				"technologies": ["Wix", "jQuery", "HTML"],
-				"btnText": "View Detail",
+				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/pokemon_facebook_mockup-min.png",
+				"title": "FB Pokemon Post",
+				"type": "design"
+			},
+			{
+				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/blazing_vortex_facebook_mockup-min.png",
+				"title": "FB Yu-Gi-Oh Post",
 				"type": "design"
 			}
 		]
