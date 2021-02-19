@@ -1,6 +1,7 @@
 @import './variables/colors';
 @import './styles/button.scss';
 
+
 .App {
   position: relative;
   width: 100%;
@@ -53,7 +54,11 @@
   }
 }
 
-
+.calendly-popup-content iframe {
+    html {
+      overflow: hidden !important;
+    }
+  }
 
 @media only screen and (max-width: 767px) {
 	.App {
