@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-import Button from '../components/Button';
+import Button from './Button';
 import '../styles/form.scss';
 
 // Email validation

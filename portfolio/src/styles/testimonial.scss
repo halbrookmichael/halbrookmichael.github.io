@@ -1,9 +1,10 @@
 @import '../variables/colors';
 
 #testimonials {
+    margin-bottom: 30px;
     
     .testimonial {
-        padding-bottom: 20px;
+        padding: 20px 0;
         border-bottom: .25px solid $color-red_deep;
 
         .testimonial-inner {
