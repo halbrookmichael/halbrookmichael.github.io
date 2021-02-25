@@ -2,20 +2,21 @@ import {
   Switch, 
   Route, 
   useLocation 
-} from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+} from "react-router-dom"
+import { AnimatePresence } from "framer-motion"
 
-import './App.scss';
+import './App.scss'
+
 
 // components
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 // layouts
-import Home from './contents/Home';
-import Portfolio from './contents/Portfolio';
-import PortfolioDetail from './contents/PortfolioDetail';
-import Testimonials from './contents/Testimonials';
-import About from './contents/About';
+import Home from './contents/Home'
+import Portfolio from './contents/Portfolio'
+import PortfolioDetail from './contents/PortfolioDetail'
+import Testimonials from './contents/Testimonials'
+import About from './contents/About'
 // import Contact from './contents/Contact'; // Not currently in use
 
 const App = () => {

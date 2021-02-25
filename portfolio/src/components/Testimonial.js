@@ -1,5 +1,7 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll'
 
+import "animate.css/animate.min.css";
 import '../styles/testimonial.scss';
 import data from '../data/data.json';
 
@@ -13,15 +15,19 @@ const Testimonial = (props) => {
 					<div className="testimonial-inner">
 						<img src="../img/person-male.png" alt="" />
 						<div className="testimonial-detail">
-							<div className="testimonial-name">
-								<h3>{item.author}</h3>
-								<p className="position">{item.position} &#x0007C;&#x0007C; <span>{item.company}</span></p>
-							</div>
-							<div className="testimonial-text">
-								<p>{item.testimonialPOne}</p>
-								<p>{item.testimonialPTwo}</p>
-								<p>{item.testimonialPThree}</p>
-							</div>
+							<ScrollAnimation animateIn='animate__fadeInLeft' animateOnce={true}>
+								<div className="testimonial-name">
+									<h3>{item.author}</h3>
+									<p className="position">{item.position} &#x0007C;&#x0007C; <span>{item.company}</span></p>
+								</div>
+							</ScrollAnimation>
+							<ScrollAnimation animateIn='animate__fadeInLeft' animateOnce={true} delay={400}>
+								<div className="testimonial-text">
+									<p>{item.testimonialPOne}</p>
+									<p>{item.testimonialPTwo}</p>
+									<p>{item.testimonialPThree}</p>
+								</div>
+							</ScrollAnimation>
 						</div>
 					</div>
 				</div>
