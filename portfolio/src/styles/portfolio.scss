@@ -76,22 +76,22 @@
 		.portfolio-items {
 			flex-wrap: wrap;
 
-			.portfolio-item {
-				padding: 0;
+			a {
 				width: 100%;
+
+				.portfolio-item {
+					padding: 0;
+					margin-bottom: 30px;
+					width: 100%;
+				}
 			}
 		}
 		
 	}
-	@media only screen and (max-width: 568px) {
-		.portfolio-item {
-			width: 100%;
-			margin-bottom: 30px;
-		}
-		.row {
-			justify-content: center;
-		}
-	}
 }
 
-	
+@media only screen and (max-width: 768px) {
+	#portfolio {
+		padding: 20px 0 50px;
+	}
+}	

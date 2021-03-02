@@ -10,8 +10,16 @@
   overflow: hidden;
   background-color: $color-cloud;
 
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   section {
-    padding: 40px 0;
+    padding-bottom: 30px;
 
     &.head {
       padding: 0;
@@ -53,12 +61,6 @@
     }
   }
 }
-
-.calendly-popup-content iframe {
-    html {
-      overflow: hidden !important;
-    }
-  }
 
 @media only screen and (max-width: 767px) {
 	.App {

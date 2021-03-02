@@ -33,8 +33,6 @@
       }
     }
   }
-
- 
 }
 
 @media only screen and (max-width: 767px) {
@@ -46,8 +44,7 @@
 
       .hamburger {
         display: block;
-        z-index: 1000;
-
+        z-index: 1001;
       }
 
       ul.links {
@@ -70,7 +67,7 @@
           left: 0;
           opacity: 1;
           transition: all 0.5s ease;
-          z-index: 99;
+          z-index: 1000;
         }
 
         .logo-links {
@@ -80,7 +77,5 @@
         }
       }
     }
-
-   
   }
 }

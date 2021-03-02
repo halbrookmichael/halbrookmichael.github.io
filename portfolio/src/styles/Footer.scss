@@ -10,17 +10,23 @@
     background-color: $color-red_deep;
     z-index: 99;
 
-    p {
-        font-weight: bold;
-        color: $color-white;
-        margin-bottom: 0;
-        text-align: center;
-    }
+    
 
     .footer-content {
         display: flex;
         justify-content: space-between;
         text-align: center;
+
+        p {
+            font-weight: bold;
+            color: $color-white;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        span {
+            font-weight: normal;
+            font-style: italic;
+        }
     }
 
     @media only screen and (max-width: 767px) {

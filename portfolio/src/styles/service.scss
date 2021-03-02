@@ -48,16 +48,11 @@
 
 @media only screen and (max-width: 767px) {
 	.service {
-		padding: 0 0 30px;
 		width: 100%;
 
 		p.service-title {
 			font-size: 26px !important;
 			line-height: 20px;
-		}
-
-		&:last-of-type {
-			padding: 0 15px;
 		}
 	}
 	.service-body {

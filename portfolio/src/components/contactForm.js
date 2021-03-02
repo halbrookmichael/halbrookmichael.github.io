@@ -148,7 +148,7 @@ class ContactForm extends Component {
     const { formErrors } = this.state;
 
     return (
-      <div className='ContactForm container'>
+      <div className='ContactForm'>
         <form id='contact-form' onSubmit={this.handleSubmit} noValidate>
           <div className='row'>
             <div className='col-md-6 col-sm-12'>

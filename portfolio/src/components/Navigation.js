@@ -20,21 +20,24 @@ const Navigation = (props) =>  {
   }, [])
 
   const handleLink = (e) => {
-    let link = document.querySelectorAll('li a');
+    let link = document.querySelectorAll('li a')
     let currentLink = e.target;
 
     link.forEach((item) => {
-      item.classList.remove('active');
+      item.classList.remove('active')
     })
 
-    currentLink.classList.add('active');
+    currentLink.classList.add('active')
 
     if(window.innerWidth <= 767) {
       handleMenu()
     }
   }
   const handleMenu = () => {
+    let body = document.querySelector('body');
     setIsOpen(!isOpen)
+
+    !isOpen ? body.style.overflow = 'hidden' : body.style.overflow = 'initial'
   }
   
   return (

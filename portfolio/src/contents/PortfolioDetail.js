@@ -19,7 +19,8 @@ class PortfolioDetail extends Component {
 			askPOne: data ? data.askPOne : localStorage.getItem('askOne'),
 			askPTwo: data ? data.askPTwo : localStorage.getItem('askTwo'),
 			technologies: data ? data.technologies : localStorage.getItem('technologies'),
-			type: data ? data.type : localStorage.getItem('type')
+			type: data ? data.type : localStorage.getItem('type'),
+			hasMobileImg: data ? data.hasMobileImg : localStorage.getItem('hasMobileImg')
 		}
 
 		if(data) {
@@ -31,13 +32,15 @@ class PortfolioDetail extends Component {
 			localStorage.setItem('askTwo', data.askPTwo);
 			localStorage.setItem('technologies', data.technologies);
 			localStorage.setItem('type', data.type);
+			localStorage.setItem('hasMobileImg', data.hasMobileImg);
 		}
 	}
 	
 	render() {
+
 		return (
 			<motion.div exit={{opacity: 0}} id="portfolio-detail" className="container">
-				<NavItem addedClasses="back" item='&#x021A4;Back' toLink='/portfolio' />
+				<NavItem addedClasses="back" item='&#8636;' toLink='/portfolio' />
 				<div className="port-title-container">
 					<a className="nav-link port-title" href={this.state.link}>{this.state.title}</a>
 				</div>
@@ -51,14 +54,17 @@ class PortfolioDetail extends Component {
 								<h3>What We Did</h3>
 								<p className="container">{this.state.askPOne}</p>
 								{
-									this.state.askPTwo ? <p className="container">{this.state.askPTwo}</p> : ''
+									this.state.askPTwo === undefined || localStorage.getItem('askTwo') === undefined ?
+									''
+									:
+									<p className="container">{this.state.askPTwo}</p>
 								}
 							</div>
 						}
 					</div>
 					{this.state.type === 'web' &&
-						<div className="mobile">
-							<div className={`tech ${!this.state.imageMobile ? 'full-width' : ''}`}>
+						<div className={`mobile ${this.state.hasMobileImg === 'false' ? 'align-left' : ''}`}>
+							<div className='tech'>
 								<h3>What We Used</h3>
 								{
 									Array.isArray(this.state.technologies)
@@ -80,15 +86,10 @@ class PortfolioDetail extends Component {
 									</div>	 
 								}
 							</div>
-								{
-									this.state.imageMobile 
-									?
-									<div className="mobile-image">
-										<img src={this.state.imageMobile} alt=""/> 
-									</div>
-									:
-									''
-								}
+							<div className={`mobile-image ${this.state.hasMobileImg === 'false' ? 'no-image' : ''}`}>
+								<img src={this.state.imageMobile} alt=""/>
+							</div>
+								
 						</div>
 					}
 				</div>

@@ -39,7 +39,7 @@ class Home extends Component {
 				</section>
 				<section className="contact container">
 					<ScrollAnimation animateIn='animate__fadeInUp' animateOnce={true}>
-						<div className="ready-text container">
+						<div className="ready-text">
 							<h2>READY TO GET STARTED CREATING YOUR WEB PRESENCE?</h2>
 							<p>Fill out the form and let us know a little about the task at hand and we will get back to you as soon as possible!</p>
 						</div>

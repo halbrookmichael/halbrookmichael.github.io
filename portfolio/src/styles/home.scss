@@ -44,7 +44,6 @@
 		}
 	}
 	.services-container {
-		// background-color: $color-red_deep;
 
 		.services {
 			display: flex;
@@ -117,6 +116,12 @@
 					width: 95%;
 				}
 			}
+		}
+	}
+
+	@media only screen and (max-width: 568px) {
+		.contact {
+			padding-bottom: 80px;
 		}
 	}
 }

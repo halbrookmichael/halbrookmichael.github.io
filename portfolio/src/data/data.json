@@ -31,17 +31,18 @@
 				"askPTwo": "There are plans to move B-Side of off Wix and to a much more robust ecommerce solution so that they can begin shipping to other states and reaching a larger audience.",
 				"link": "https://www.bsideboardgamesandpuzzles.com/",
 				"technologies": ["Wix", " jQuery", "HTML", "CSS"],
-				"btnText": "View Detail",
-				"type": "web"
+				"type": "web",
+				"hasMobileImg": "true"
 			},
 			{
 				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf-min.png",
 				"title": "WHWF Spokane",
-				"askPOne": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eum blanditiis dolores ullam tenetur qui eveniet? Cumque sequi, quibusdam quisquam cum aperiam placeat nostrum saepe, aliquam fugit nam architecto nemo. Ratione eveniet corrupti deserunt unde voluptas voluptates omnis autem consectetur? Enim molestias dicta dolores, expedita est eaque ducimus distinctio eius laboriosam et fugiat molestiae laudantium repellat odio! Accusantium, exercitationem fugit. Magni praesentium laborum suscipit eaque eligendi voluptatibus repellendus quisquam cumque neque a in qui reiciendis ipsam provident at quod veniam beatae ratione aperiam, asperiores voluptas quibusdam illum debitis? Ratione, molestias. Suscipit, ab deleniti dolore debitis quod eius, eum nemo error voluptatem pariatur ad consectetur quam officiis tempore doloribus commodi expedita illum quas optio assumenda fugit quisquam. Quos, et. Provident, hic?",
+				"askPOne": "WHWF Spokane came to us with an interesting ask. They needed to have forms from Bloomerang properly formatted and setup through their Wix site, which doesn't offer direct support to Bloomerang. They approached multiple shops regarding this and were given options that did not fit their needs. We were able to customize the forms HTML, CSS, and Javascript directly so that the forms could be from Bloomerang and formatted to their liking. We also corrected errors in regard to the form captchas not working properly by updating the site keys via Google's captcha API.",
+				"askPTwo": "We also transferred their domain from GoDaddy to Wix hosting an updated design and layout on multiple different pages throughout the site.",
 				"link": "https://www.whwfspokane.org/",
 				"technologies": ["Wix", "jQuery", "HTML", "CSS", "Google captcha", "Domain registration"],
-				"btnText": "View Detail",
-				"type": "web"
+				"type": "web",
+				"hasMobileImg": "false"
 			},
 			{
 				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/kaldheim_facebook_mockup-min.png",
