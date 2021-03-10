@@ -45,7 +45,7 @@ const About = () => {
 						</div>
 					</ScrollAnimation>
 					<ScrollAnimation animateIn='animate__fadeInLeft' animateOnce={true} delay={200}>
-						<div className="about-section">
+						<div className="about-section last">
 							<h4>Who We Helped</h4>
 							<div className="company-logos">
 								<div className="logo">

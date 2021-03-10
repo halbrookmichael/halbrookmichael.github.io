@@ -112,9 +112,13 @@
             padding: 20px;
 
             .about-text-left {
-            
+                
                 .about-section {
                     margin-bottom: 30px;
+
+                    &.last {
+                        margin-bottom: 0;
+                    }
 
                     h4 {
                         margin-bottom: 10px;
@@ -132,22 +136,22 @@
             height: auto;
             order: -1;
             background-image: none !important;
+            padding: 0 20px;
 
             .overlay {
                 display: none;
             }
 
             .about-text-right {
-                padding: 80px 0 0;
-                max-width: 456px;
+                padding: 40px 0 0;
                 position: relative;
+                border-bottom: .5px solid $color-purple;
 
                 h2 {
-                    font-size: 68px;
+                    font-size: 50px;
                     color: $color-purple;
                     line-height: 1;
                     padding-bottom: 20px;
-                    border-bottom: .5px solid $color-purple;
                     margin-top: 0;
                 }
             }

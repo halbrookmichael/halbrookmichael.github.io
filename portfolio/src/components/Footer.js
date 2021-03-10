@@ -4,10 +4,9 @@ const Footer = (props) => {
 	return (
 		<section id="footer">
 			<div className="footer-content">
-				<p className="email">Email: <span>halbrookmichael@gmail.com</span></p>
+				<p className="email">Email: <a href="mailto:michael.halbrook@altered-pixels.tech">michael.halbrook@altered-pixels.tech</a></p>
 				<p className="copyright">&copy; Altered Pixels. All rights reserved.</p>
-				{/* <div className="social">* * * *</div> */}
-				<p className="phone">Phone: <span>509.771.1384</span></p>
+				<p>Phone: <a className="phone" href="tel:509-771-1384"><span>509.771.1384</span></a></p>
 			</div>
 		</section>
 	)
