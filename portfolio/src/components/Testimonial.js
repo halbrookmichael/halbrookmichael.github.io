@@ -13,7 +13,6 @@ const Testimonial = (props) => {
 			{testimonials.map((item, index) => (
 				<div key={index} className="testimonial">
 					<div className="testimonial-inner">
-						<img src="../img/person-male.png" alt="" />
 						<div className="testimonial-detail">
 							<ScrollAnimation animateIn='animate__fadeInLeft' animateOnce={true}>
 								<div className="testimonial-name">
