@@ -5,19 +5,23 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import Service from '../components/Service'
 import ContactForm from '../components/ContactForm'
 
-import '../styles/home.scss'
-import "animate.css/animate.min.css"
+import '../styles/home.scss';
+import 'animate.css/animate.min.css';
 
-import logo from '../img/altered_pixels_logo.svg'
-import data from '../data/data.json' 
+import logo from '../img/altered_pixels_logo.svg';
+import data from '../data/data.json' ;
 
 const services = data.services;
+// const { width } = windowDimensions();
+
 
 class Home extends Component {
 	
 	render() {
+    
 		return (
 			<motion.div exit={{opacity: 0}} id="home">
+
 				<section className="head" style={{backgroundImage: `url(${data.home.bg})`}}>
 					<div className="overlay"></div>
 					<ScrollAnimation animateIn='animate__fadeInUp' animateOnce={true}>
@@ -28,6 +32,7 @@ class Home extends Component {
 						</div>
 					</ScrollAnimation>
 				</section>
+
 				<section className="services-container">
 					<ScrollAnimation animateIn='animate__fadeInUp' animateOnce={true} delay={320}>
 						<div className="services container">
@@ -37,6 +42,7 @@ class Home extends Component {
 						</div>
 					</ScrollAnimation>
 				</section>
+
 				<section className="contact container">
 					<ScrollAnimation animateIn='animate__fadeInUp' animateOnce={true}>
 						<div className="ready-text">
@@ -45,8 +51,8 @@ class Home extends Component {
 						</div>
 						<ContactForm />
 					</ScrollAnimation>
-					
 				</section>
+
 			</motion.div>
 		)
 	}

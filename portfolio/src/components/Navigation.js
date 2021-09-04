@@ -62,8 +62,6 @@ const Navigation = (props) =>  {
           <NavItem addedClasses="home" item='Home' toLink='/' handleClick={handleLink} />
           <NavItem addedClasses="portfolio" item='Work' toLink='/portfolio' handleClick={handleLink} />
           <NavItem addedClasses="testimonials" item='Happy Clients' toLink='/testimonials' handleClick={handleLink} />
-          <NavItem addedClasses="about" item='About' toLink='/about' handleClick={handleLink} />
-          {/* <NavItem addedClasses="contact" item='Contact' toLink='/contact' handleClick={handleLink} /> */}
           <div className="logo-links">
             <img src={logo} alt=""/>
           </div>

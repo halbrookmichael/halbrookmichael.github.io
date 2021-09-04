@@ -1,19 +1,13 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import ScrollAnimation from 'react-animate-on-scroll'
 
 import "animate.css/animate.min.css";
 import '../styles/about.scss';
 
-import windowDimensions from '../helpers/_onResize'
-
 import data from '../data/data.json';
-import BSIDE from '../img/logo_box_bside.png'
-import WHWF from '../img/logo_box_whwf.png'
 
 
 const About = () => {
-	const { width } = windowDimensions();
 
 	return (
 		<motion.div exit={{opacity: 0}} id="about">
@@ -44,23 +38,9 @@ const About = () => {
 							<p>{data.about.header.tagline}</p>
 						</div>
 					</ScrollAnimation>
-					<ScrollAnimation animateIn='animate__fadeInLeft' animateOnce={true} delay={200}>
-						<div className="about-section last">
-							<h4>Who We Helped</h4>
-							<div className="company-logos">
-								<div className="logo">
-								<a href="https://www.bsideboardgamesandpuzzles.com/"><img src={BSIDE} alt="B-Side logo"/></a>
-								</div>
-								<div className="logo">
-								<a href="https://www.whwfspokane.org/"><img src={WHWF} alt="WHWF logo"/></a>	
-								</div>
-							</div>
-						</div>
-					</ScrollAnimation>
-					
 				</div>
 			</section>
-			<section className="about-section-right" style={{backgroundImage: `url(${data.about.header.img})`}}>
+			{/* <section className="about-section-right" style={{backgroundImage: `url(${data.about.header.img})`}}>
 				<div className="overlay"></div>
 				{
 					width <= 986 ?
@@ -76,7 +56,7 @@ const About = () => {
 						</div>
 					</ScrollAnimation>
 				}
-			</section>
+			</section> */}
 		</motion.div>
 	)
 }

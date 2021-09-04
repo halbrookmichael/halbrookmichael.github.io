@@ -6,7 +6,7 @@ const Service = (props) => {
 	return (
 		<div className="service container">
 			<div className="service-head">
-				<p className="service-title">{props.service}</p>
+				<h2 className="service-title">{props.service}</h2>
 			</div>
 			<div className="service-body">
 				<p>{props.serviceDesc}</p>

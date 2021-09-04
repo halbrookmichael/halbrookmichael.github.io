@@ -3,23 +3,20 @@
 
 #home {
 	section.head {
-		padding: 0;
-	}
-
-	section.head {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		width: 100%;
-		max-height: 700px;
+		max-height: 480px;
 		position: relative;
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
-		padding: 15% 0;
+		padding: 60px 0;
 		background-color: $color-black;
+    margin-bottom: 30px;
 
 		.logo {
 			width: 150px;
@@ -48,7 +45,40 @@
 		.services {
 			display: flex;
 			align-items: flex-start;
-			padding: 20px 0;
+			padding: 20px 15px;
+
+      .service {
+        position: relative;
+        background-color: $color-red_deep;
+        border-radius: 10px;
+        margin-right: 10px;
+        padding: 20px 20px 0;
+        min-height: 350px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        .service-head {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -26px;
+          margin: auto;
+          text-align: center;
+
+          h2 {
+            font-size: 65px;
+            color: $color-white;
+          }
+        }
+        .service-body {
+
+          p {
+            color: $color-white;
+          }
+        }
+      }
 		}
 	}
 	.contact {
@@ -73,6 +103,20 @@
 		.services {
 			justify-content: center;
 		}
+	}
+  @media only screen and (max-width: 900px) {
+    .services-container {
+
+      .services {
+        flex-direction: column;
+
+        .service {
+          min-height: 100%;
+          padding-bottom: 80px;
+          margin-bottom: 20px;
+        }
+      }
+    }
 	}
 	@media only screen and (max-width: 768px) {
 		.services {
@@ -118,7 +162,6 @@
 			}
 		}
 	}
-
 	@media only screen and (max-width: 568px) {
 		.contact {
 			padding-bottom: 80px;

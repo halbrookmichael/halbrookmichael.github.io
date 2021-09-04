@@ -6,9 +6,8 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding-bottom: 64px;
+  padding-bottom: auto;
   overflow: hidden;
-  background-color: $color-cloud;
 
   .container {
     width: 100%;
@@ -17,6 +16,13 @@
     margin-right: auto;
     margin-left: auto;
   }
+
+  #home,
+  #portfolio,
+  #testimonials {
+    min-height: 100vh;
+  }
+
 
   section {
     padding-bottom: 30px;
@@ -62,9 +68,18 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
+
+
+@media (min-width: 567px) {
+  .container, 
+  .container-md, 
+  .container-sm {
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 767px) {
 	.App {
-    padding-bottom: 112px;
+    padding-bottom: auto;
 
     section.head,
     #about section.head {
@@ -90,5 +105,13 @@
     p {
       font-size: 16px !important;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .container, 
+  .container-md, 
+  .container-sm {
+    max-width: 1140px !important;
   }
 }
