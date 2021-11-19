@@ -12,7 +12,7 @@
 		},
 		{
 			"service": "Design",
-			"description": "From custom social media posts to layout design. We create clean, simple and beuatiful designs. Intuitive for the user and easy on the eyes.",
+			"description": "From custom social media posts to layout design. We create clean, simple and beautiful designs. Intuitive for the user and easy on the eyes.",
 			"btnText": "Design Projects"
 		},
 		{
@@ -27,10 +27,10 @@
 				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside-min.png",
 				"imgMobile": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/Bside_mobile-min.png",
 				"title": "B-Side Games",
-				"askPOne": "B-Side was in need of a full site redesign and social media posts consitency. Utilizing the tools provided by Wix, which are very limiting, we were able to create a clean, modern and fun design for the game store. We also created custom database entries in Wix to update new card game releases automatically, using jQuery, along with adding custom widgets for Discord and TCGPlayer. As for social media, we created a clean aesthetic that gets straight to the point and delivers the information needed to the user. We are also creating a Twitter and YouTube account for the store, so that we can post box openings of product and reviews to furhter engage customers.",
-				"askPTwo": "There are plans to move B-Side of off Wix and to a much more robust ecommerce solution so that they can begin shipping to other states and reaching a larger audience.",
+				"askPOne": "B-Side was in need of a full site redesign and social media posts consitency. Utilizing the tools provided by Wix, which are very limiting, we were able to create a clean, modern and fun design for the game store. We also created custom database entries in Wix to update new card game releases automatically, using jQuery, along with adding custom widgets for Discord and TCGPlayer. As for social media, we created a clean aesthetic that gets straight to the point and delivers the information needed to the user. We are also creating a Twitter and YouTube account for the store, so that we can post box openings of product and reviews to further engage customers.",
+				"askPTwo": "There are plans to move B-Side off of Wix and to a much more robust ecommerce solution so that they can begin shipping to other states and reaching a larger audience.",
 				"link": "https://www.bsideboardgamesandpuzzles.com/",
-				"technologies": ["Wix", " jQuery", "HTML", "CSS"],
+				"technologies": ["jQuery", "HTML", "CSS"],
 				"type": "web",
 				"hasMobileImg": "true"
 			},
@@ -38,9 +38,9 @@
 				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf-min.png",
 				"title": "WHWF Spokane",
 				"askPOne": "WHWF Spokane came to us with an interesting ask. They needed to have forms from Bloomerang properly formatted and setup through their Wix site, which doesn't offer direct support to Bloomerang. They approached multiple shops regarding this and were given options that did not fit their needs. We were able to customize the forms HTML, CSS, and Javascript directly so that the forms could be from Bloomerang and formatted to their liking. We also corrected errors in regard to the form captchas not working properly by updating the site keys via Google's captcha API.",
-				"askPTwo": "We also transferred their domain from GoDaddy to Wix hosting an updated design and layout on multiple different pages throughout the site.",
+				"askPTwo": "finally, we transferred their domain from GoDaddy to Wix hosting and updated design and layout on multiple pages throughout the site.",
 				"link": "https://www.whwfspokane.org/",
-				"technologies": ["Wix", "jQuery", "HTML", "CSS", "Google captcha", "Domain registration"],
+				"technologies": ["jQuery", "HTML", "CSS"],
 				"type": "web",
 				"hasMobileImg": "false"
 			},
@@ -77,8 +77,14 @@
 			"testimonialPOne": "\"Michael really came through for Women Helping Women Fund when we needed a developer for our Wix site. We had spoken to six other vendors (some even certified as Wix friendly) and he was the only one willing to take on our project without changing the scope.",
 			"testimonialPTwo": "It was important to us that we use the code provided by our database provider for the forms on our site. Other vendors would only take on the project if we would settle for a workaround solution, but Michael made it happen. He was able to get the forms up and running while also making them look visually appealing. He listened to our needs and produced great results despite the weird quirks we found with the Wix platform.",
 			"testimonialPThree": " He also helped us to optimize our site and fix some other pieces that were giving our staff some trouble. He was very responsive and a great communicator through the whole process. He went above and beyond on our project.\""
+		},
+    {
+			"img": "",
+			"author": "David Butler",
+			"position": "President",
+			"company": "Greatmats",
+			"testimonialPOne": "\"As a small business owner of 20 years working in ecommerce and site development, I can say that Michael Halbrook with Altered Pixels has been a real pleasure to work with for Greatmats. Michael is organized, timely and has offered many creative solutions to our front end CSS, HTML coding changes, especially around AMP compatibility and UX design. I can recommend Michael as a reliable front end developer within retail web environments.\""
 		}
-	
 	],
 	"about": {
 		"header": {
