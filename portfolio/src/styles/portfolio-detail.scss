@@ -24,17 +24,14 @@
 
 	.port-title-container {
 		margin-top: 30px;
-
-		.nav-link {
-
-			&.port-title {
-				display: inline;
-				text-transform: uppercase;
-				font-weight: bold;
-				font-size: 40px;
-			}
-		}
 	}
+
+  .port-title {
+      display: inline;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 40px;
+    }
 	
 	.port-info {
 		display: flex;
@@ -106,7 +103,24 @@
 	}
 
   .social-media-container {
+
+    .social-media-detail-container {
     
+      .social-media-detail {
+        padding: 20px 0;
+        width: 60%;
+        margin: 0 auto;
+
+        p {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        img {
+          border-radius: 10px;
+        }
+      }
+    }
   }
 
 	@media only screen and (max-width: 968px) {
@@ -120,6 +134,7 @@
 
 			.ask {
 				padding: 0;
+        margin-top: -120px;
 			}
 
 			.desktop, 
@@ -137,6 +152,16 @@
 				}
 			}
 		}
+
+    .social-media-container {
+
+      .social-media-detail-container {
+      
+        .social-media-detail {
+          width: 90%;
+        }
+      }
+    }
 	}
 	@media only screen and (max-width: 568px) {
 		.port-title-container {

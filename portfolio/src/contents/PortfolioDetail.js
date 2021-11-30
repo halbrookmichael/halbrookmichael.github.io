@@ -19,7 +19,7 @@ class PortfolioDetail extends Component {
 			askPOne: data ? data.askPOne : localStorage.getItem('askOne'),
 			askPTwo: data ? data.askPTwo : localStorage.getItem('askTwo'),
 			technologies: data ? data.technologies : localStorage.getItem('technologies'),
-			socialMedia: data ? data.socialMedia : localStorage.getItem('social'),
+			socialMedia: data ? data.socialMedia : localStorage.getItem('socialMedia'),
 			hasMobileImg: data ? data.hasMobileImg : localStorage.getItem('hasMobileImg')
 		}
 
@@ -31,7 +31,7 @@ class PortfolioDetail extends Component {
 			localStorage.setItem('askOne', data.askPOne);
 			localStorage.setItem('askTwo', data.askPTwo);
 			localStorage.setItem('technologies', data.technologies);
-			localStorage.setItem('social', data.socialMedia);
+			localStorage.setItem('socialMedia', data.socialMedia);
 			localStorage.setItem('hasMobileImg', data.hasMobileImg);
 		}
 	}
@@ -42,12 +42,12 @@ class PortfolioDetail extends Component {
 			<motion.div exit={{opacity: 0}} id="portfolio-detail" className="container">
 				<NavItem addedClasses="back" item='&#8636;' toLink='/portfolio' />
 				<div className="port-title-container">
-					<a className="nav-link port-title" href={this.state.link}>{this.state.title}</a>
+					<h2 className="port-title" href={this.state.link}>{this.state.title}</h2>
 				</div>
 				<div className="port-info">
 					<div className="desktop">
-						<div className={`desktop-image ${this.state.type === 'design' ? 'design' : ''}`}>
-							<img src={this.state.image} alt="B-Side desktop"/>
+						<div className={`desktop-image`}>
+							<img src={this.state.image} alt="Website desktop"/>
 						</div>
             <div className="ask">
               <h3>What We Did</h3>
@@ -90,16 +90,18 @@ class PortfolioDetail extends Component {
           </div>
           {this.state.socialMedia &&
             <div className="social-media-container">
-              {
-                this.state.socialMedia.map((post, index) => {
-                  return(
-                    <div key={index} className="social-media-detail">
-                      <p>{post.title} Hello</p>
-                      <img src={post.img} alt=""/>
-                    </div>
-                  )
-                })
-              }
+              <h2 className="port-title">Social Media</h2>
+              <div className="social-media-detail-container">
+                {
+                  this.state.socialMedia.map((post, index) => {
+                    return(
+                      <div key={index} className="social-media-detail">
+                        <img src={post.img} alt=""/>
+                      </div>
+                    )
+                  })
+                }
+              </div>
             </div>
           }
 				</div>
