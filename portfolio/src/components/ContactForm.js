@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import ReCAPTCHA from "react-google-recaptcha";
 
 import Button from './Button';
 import '../styles/form.scss';
@@ -25,6 +26,8 @@ const formValid = ({ formErrors, ...rest }) => {
 
   return valid;
 };
+
+const recaptchaRef = React.createRef();
 
 class ContactForm extends Component {
   
@@ -71,8 +74,11 @@ class ContactForm extends Component {
     });
   }
 
-  handleSubmit = (e) => {
+  onSubmit = (e) => {
     e.preventDefault();
+
+    const recaptchaValue = recaptchaRef.current.getValue();
+    this.props.onSubmit(recaptchaValue);
 
     if (formValid(this.state)) {
       // Handle form validation success
@@ -144,12 +150,16 @@ class ContactForm extends Component {
     this.setState({ formErrors, [name]: value });
   };
 
+  onChange= (value) => {
+    console.log("Captcha value:", value);
+  }
+
   render() {
     const { formErrors } = this.state;
 
     return (
       <div className='ContactForm'>
-        <form id='contact-form' onSubmit={this.handleSubmit} noValidate>
+        <form id='contact-form' onSubmit={this.onSubmit} noValidate>
           <div className='row'>
             <div className='col-md-6 col-sm-12'>
               <input
@@ -234,6 +244,11 @@ class ContactForm extends Component {
               )}
             </div>
 					</div>
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey="6Ldh_WsdAAAAALGcT-pUrEQmdluh786lfA_pour7"
+            onChange={onChange}
+          />
 					<div className="submit-btn-container">
 						<Button className='btn btn-primary submit-btn' text="Let's Do This" type='submit' />
 					</div>	
