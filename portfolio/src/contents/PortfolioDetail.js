@@ -19,7 +19,7 @@ class PortfolioDetail extends Component {
 			askPOne: data ? data.askPOne : localStorage.getItem('askOne'),
 			askPTwo: data ? data.askPTwo : localStorage.getItem('askTwo'),
 			technologies: data ? data.technologies : localStorage.getItem('technologies'),
-			type: data ? data.type : localStorage.getItem('type'),
+			socialMedia: data ? data.socialMedia : localStorage.getItem('social'),
 			hasMobileImg: data ? data.hasMobileImg : localStorage.getItem('hasMobileImg')
 		}
 
@@ -31,7 +31,7 @@ class PortfolioDetail extends Component {
 			localStorage.setItem('askOne', data.askPOne);
 			localStorage.setItem('askTwo', data.askPTwo);
 			localStorage.setItem('technologies', data.technologies);
-			localStorage.setItem('type', data.type);
+			localStorage.setItem('social', data.socialMedia);
 			localStorage.setItem('hasMobileImg', data.hasMobileImg);
 		}
 	}
@@ -49,49 +49,59 @@ class PortfolioDetail extends Component {
 						<div className={`desktop-image ${this.state.type === 'design' ? 'design' : ''}`}>
 							<img src={this.state.image} alt="B-Side desktop"/>
 						</div>
-						{this.state.type === 'web' &&
-							<div className="ask">
-								<h3>What We Did</h3>
-								<p className="container">{this.state.askPOne}</p>
-								{
-									this.state.askPTwo === undefined || localStorage.getItem('askTwo') === undefined ?
-									''
-									:
-									<p className="container">{this.state.askPTwo}</p>
-								}
-							</div>
-						}
+            <div className="ask">
+              <h3>What We Did</h3>
+              <p className="container">{this.state.askPOne}</p>
+              {
+                this.state.askPTwo === undefined || localStorage.getItem('askTwo') === undefined ?
+                ''
+                :
+                <p className="container">{this.state.askPTwo}</p>
+              }
+            </div>
 					</div>
-					{this.state.type === 'web' &&
-						<div className={`mobile ${this.state.hasMobileImg === 'false' ? 'align-left' : ''}`}>
-							<div className='tech'>
-								<h3>What We Used</h3>
-								{
-									Array.isArray(this.state.technologies)
-									?
-									<ul className="technologies">
-										{
-											this.state.technologies.map((item, index) => (
-												<li key={index}>{item}</li>
-											)) 
-										}
-									</ul>
-									: 
-									<div className="technologies">
-										{
-											this.state.technologies.split(',').map((item, index) => (
-												<p key={index}>{item}</p>
-											))
-										}
-									</div>	 
-								}
-							</div>
-							<div className={`mobile-image ${this.state.hasMobileImg === 'false' ? 'no-image' : ''}`}>
-								<img src={this.state.imageMobile} alt=""/>
-							</div>
-								
-						</div>
-					}
+          <div className={`mobile ${this.state.hasMobileImg === 'false' ? 'align-left' : ''}`}>
+            <div className='tech'>
+              <h3>What We Used</h3>
+              {
+                Array.isArray(this.state.technologies)
+                ?
+                <ul className="technologies">
+                  {
+                    this.state.technologies.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    )) 
+                  }
+                </ul>
+                : 
+                <div className="technologies">
+                  {
+                    this.state.technologies.split(',').map((item, index) => (
+                      <p key={index}>{item}</p>
+                    ))
+                  }
+                </div>	 
+              }
+            </div>
+            <div className={`mobile-image ${this.state.hasMobileImg === 'false' ? 'no-image' : ''}`}>
+              <img src={this.state.imageMobile} alt=""/>
+            </div>
+              
+          </div>
+          {this.state.socialMedia &&
+            <div className="social-media-container">
+              {
+                this.state.socialMedia.map((post, index) => {
+                  return(
+                    <div key={index} className="social-media-detail">
+                      <p>{post.title} Hello</p>
+                      <img src={post.img} alt=""/>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          }
 				</div>
 			</motion.div>
 		);	

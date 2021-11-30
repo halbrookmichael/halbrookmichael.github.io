@@ -31,8 +31,21 @@
 				"askPTwo": "There are plans to move B-Side off of Wix and to a much more robust ecommerce solution so that they can begin shipping to other states and reaching a larger audience.",
 				"link": "https://www.bsideboardgamesandpuzzles.com/",
 				"technologies": ["jQuery", "HTML", "CSS"],
-				"type": "web",
-				"hasMobileImg": "true"
+				"hasMobileImg": "true",
+        "socialMedia": [
+          {
+            "img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/kaldheim_facebook_mockup-min.png",
+            "title": "FB Magic Post"
+          },
+          {
+            "img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/pokemon_facebook_mockup-min.png",
+            "title": "FB Pokemon Post"
+          },
+          {
+            "img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/blazing_vortex_facebook_mockup-min.png",
+            "title": "FB Yu-Gi-Oh Post"
+          }
+        ]
 			},
 			{
 				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/whwf-min.png",
@@ -41,23 +54,7 @@
 				"askPTwo": "finally, we transferred their domain from GoDaddy to Wix hosting and updated design and layout on multiple pages throughout the site.",
 				"link": "https://www.whwfspokane.org/",
 				"technologies": ["jQuery", "HTML", "CSS"],
-				"type": "web",
 				"hasMobileImg": "false"
-			},
-			{
-				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/kaldheim_facebook_mockup-min.png",
-				"title": "FB Magic Post",
-				"type": "design"
-			},
-			{
-				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/pokemon_facebook_mockup-min.png",
-				"title": "FB Pokemon Post",
-				"type": "design"
-			},
-			{
-				"img": "https://port-images.s3-us-west-2.amazonaws.com/portfoilo/blazing_vortex_facebook_mockup-min.png",
-				"title": "FB Yu-Gi-Oh Post",
-				"type": "design"
 			}
 		]
 	},

@@ -26,7 +26,7 @@ const Footer = (props) => {
           </div>
         </ScrollAnimation>
       </section>
-      <section class="footer">
+      <section className="footer">
         <div className="footer-content">
           <p className="email">Email: <a href="mailto:alteredpixelsinfo@gmail.com">alteredpixelsinfo@gmail.com</a></p>
           <p className="copyright">&copy; Altered Pixels. All rights reserved.</p>

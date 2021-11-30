@@ -12,7 +12,7 @@ const Portfolio = () => {
 	return (
 		<ScrollAnimation animateIn='animate__fadeInUp' animateOnce={true}>
 			<motion.div exit={{opacity: 0}} id="portfolio" className="container">
-				<PortfolioItem portItems={data.portfolio}/>
+				<PortfolioItem portItems={data.portfolio} />
 			</motion.div>
 		</ScrollAnimation>
 	)
